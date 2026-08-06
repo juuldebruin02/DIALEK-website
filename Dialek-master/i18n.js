@@ -1,179 +1,267 @@
-/* ============================================================
-   DIALEK. — localization, but the "languages" are Limburgs dialects.
-   10 prominent dialects spread across Limburg (Roermond, Maastricht en
-   Sittard zitten d'r zeker bij).
-
-   NOTE: the dialect strings are a best-effort starting point that leans on
-   well-known features of each tongue (e.g. Kirchröadsj g→j / sj-klanken,
-   Mestreechs "dat", northern "aovend"). A native speaker should still give
-   each variant a proofread — the i18n engine itself swaps any string you
-   correct here without further code changes.
-   ============================================================ */
 (function () {
   "use strict";
 
-  // Default = Remunjs (the event is in Remunj/Roermond and matches the poster).
+  /*
+   * DIALEK 2027 translation layer.
+   * These regional versions are a best-effort editorial starting point.
+   * The website labels them as provisional until a speaker of each dialect
+   * has reviewed the matching column in the future translation matrix.
+   */
   var BASE = {
-    navLineup:   "Line-up",
-    navInfo:     "Info",
-    navTickets:  "Tickets",
-    selectLabel: "Kies dien dialek",
+    navProgram: "Programma",
+    navInfo: "Info",
+    navTickets: "Tickets",
+    dialectNote: "vertaling in ontwikkeling",
 
-    kicker:       "Unne bandoavend in 't plat",
-    subtitle:     "det klink good",
-    presentLabel: "presentatie door",
-    heroDate:     "6 meert 2026",
-    heroDoors:    "inloup 19:30 oer",
-    heroVenue:    "De Azijnfabriek, Remunj",
+    kicker: "Ein daags festival in 't plat",
+    subtitle: "det klink good",
+    dayDoorsLabel: "Inloup daagprogramma",
+    showDoorsLabel: "Inloup aovendshowcase",
+    heroDate: "27 fibberwari 2027",
+    heroTown: "Remunj",
+    scrollHint: "bekiek 't programma",
 
-    lineupEyebrow: "'t Programma",
-    lineupTitle:   "Wae kump speule",
-    act1: "Luuke liedjes, recht oet 't hart — gezonge in 't plat.",
-    act2: "Rauwe indie mit 'n Limburgse twist die blief hange.",
-    act3: "'n Collectief oet de kelder dat de boel op z'n kop zit.",
-    actsHost: "Gepresenteerd door",
+    programEyebrow: "27 fibberwari 2027 · ECI Cultuurfabriek",
+    programTitle: "'t ganse programma",
+    programIntro: "Van tekst en taol tot de nuujste Limburgstalige muziek. Ontdek de ganse festivaldaag.",
+    dayKicker: "Cultuurcafé · vanaaf 12:00",
+    dayTitle: "Daagprogramma",
+    dayNote: "De definitieve tiedsjlotte volge later.",
+    nightKicker: "Popzaal · inloup 19:30 · start 20:00",
+    nightTitle: "Aovendshowcase",
+    nightNote: "Vief acts, twee showblokke, ein nuuj generatie Limburgstalige makers.",
+    dayProgramLabel: "Daagprogramma",
+    artistLabel: "Artiest",
+    timeTba: "tied volg",
+    programFollows: "Volledig programma volgt",
+    inDevelopment: "In ontwikkeling",
+    showBlockOne: "Showblok 01",
+    showBlockTwo: "Showblok 02",
+    pause: "Pauze",
+    presentedBy: "De aovend weurt gepresenteerd door",
 
-    infoWhen:     "Wanneer",
-    infoWhere:    "Woa",
-    infoEntry:    "Entree",
-    infoDate:     "6 meert 2026",
-    infoDoors:    "Inloup 19:30 oer\nAanvang 20:00 oer",
-    infoVenueBig: "De Azijnfabriek",
-    infoVenueSub: "Remunj (Roermond)\nLimburg, NL",
-    infoPrice:    "Gratis",
-    infoPriceSub: "Mit aanmelding\nvol = vol",
+    textStageTitle: "Tekstverslaafd-podium",
+    textStageShort: "Limburgstalige poëzie, spoken word, liedjes en verhaole.",
+    textStageLong: "Drik Heffels en Stichting Tekstverslaafd make plek veur Limburgstalige dichters, spoken word-artieste, singer-songwriters en angere tekstmakers. Ein toegankelijke plek woa nuuj talent werk kan oetprebere en podiumervaring opdeit.",
+    matchShort: "Jónk en aad in gesprek euver de taol van toen, noe en later.",
+    matchLong: "De Taalmatch koppelt ein jongere Limburgsspreker of geïnteresseerde bezeuker aan ein oudere Limburgsspreker. Mit ein korte gesprekskaart deile ze herinneringe, ervaringen en hun blik op de toekomst van 't Limburgs.",
+    matchCta: "Aanmeldlink volgt",
+    languageTitle: "Interactieve taalactiviteiten",
+    languageShort: "Speul, deel en ontdek wat 't Limburgs veur dich beteikent.",
+    languageLong: "Dink aan ein Limburgse taalquiz, ein kaart mit favoriete wäörd en streekvariante, of ein live podcast woa bezeukers bie aansloete. De definitieve vörm weurt same mit potentiële partner Limburgs Museum oetgewirk.",
+    networkTitle: "Netwerkevenement",
+    networkShort: "Ein ontmoetingsplek veur makers, programmeurs en professionals.",
+    networkLong: "In 't Cultuurcafé kriege makers, programmeurs en professionals oet de Limburgstalige culturele sector de ruumte om kennis te deile, kontakte te legge en nuuj samewerkinge te starte.",
 
-    ticketsTitle: "Link veur gratis tickets",
-    ticketsSub:   "Unne bandoavend in 't plat — in de Azijnfabriek in Remunj. Vol = vol, dus wees d'r snel bie.",
-    ticketsBtn:   "Reserveer dien plek",
+    sophieShort: "Limburgstalige liedjes, dichtbij en recht oet 't hart.",
+    sophieLong: "Sophie Albert geuf 't Limburgs ein persoonlijke, eigentiedse plek. Verwach liedjes die klein dörve te beginne en op 't podium groots binnekomme. Deze artiestentekst is veurluipig en weurt later aangevuld.",
+    tbaShort: "Ein nuuj Limburgstalige act weurt later bekindgemaak.",
+    tbaLong: "De viefde act van de aovendshowcase is nog neet bekind. Volg DIALEK veur de aankondiging.",
+    toBeAnnounced: "Wordt bekendgemaakt",
+    limboShort: "Rauwe indie mit ein Limburgse twist die blief hange.",
+    limboLong: "In Limbo verbindt rauwe gitaren en eigentiedse indie mit de klank van 't Limburgs. Ein liveset mit energie, rafelrendsjes en ruimte veur verhaole. Deze artiestentekst is veurluipig.",
+    riethamerShort: "Oldschoolhiphop oet Limburg, direk en vol karakter.",
+    riethamerLong: "Riethamer Rekords bringk ein collectieve hiphopenergie nao 't podium. Limburgse flows, oldschool invleude en ein sound die de taol stevig in 't noe zet. Deze artiestentekst is veurluipig.",
+    basementShort: "Ein veertienkoppig collectief mit ein explosieve live-energie.",
+    basementLong: "The Basement Collective sleut de showcase aaf mit de energie van ein groot livecollectief. Ein volle bezetting, ein feestelijke podiumpresentatie en 't Limburgs veurop. Deze artiestentekst is veurluipig.",
+    spotifySearch: "Zeuk op Spotify",
 
-    footerTag:  "det klink good",
-    footerMeta: "© 2026 · De Azijnfabriek, Remunj",
-    soundLabel: "Geluid",
-    scrollHint: "scroll"
+    infoEyebrow: "Waorum DIALEK?",
+    infoTitle: "Limburgs klink van noe",
+    infoLead: "DIALEK geuf ein nuuj generatie Limburgstalige makers ein professioneel podium. Ein festival woa muziek, taol, talentontwikkeling en ontmoeting samekómme — en woa 't Limburgs klinkt in pop, rock, hiphop, poëzie en spoken word van noe.",
+    dateHeading: "Wanneer",
+    dateValue: "27 fibberwari 2027",
+    dateDetail: "Daagprogramma vanaaf 12:00\nAovendshowcase vanaaf 19:30",
+    locationHeading: "Woa",
+    ticketsHeading: "Tickets",
+    ticketsDetail: "Exclusief administratiekoste\nVerkoop via ECI Cultuurfabriek",
+    visitors: "bezeukers",
+    festivalDay: "festivaldaag",
+    dialects: "dialekke op de website",
+    partnersHeading: "Same mit",
+    translationFooter: "De dialekvertalinge zeen veurluipig en waere nog gecontroleerd mit dialeksprekers."
   };
 
-  // merge: each dialect overrides only what differs from BASE
-  function D(over) {
-    var o = {}, k;
-    for (k in BASE) o[k] = BASE[k];
-    for (k in over) o[k] = over[k];
-    return o;
+  function merge(overrides) {
+    var result = {};
+    var key;
+    for (key in BASE) result[key] = BASE[key];
+    for (key in overrides) result[key] = overrides[key];
+    return result;
   }
 
-  // The 10 dialects. `code` is the stored id, `name`/`town` show in the menu.
   var DIALECTS = [
-    { code: "remunjs", name: "Remunjs", town: "Roermond", strings: D({}) },
-
-    { code: "mestreechs", name: "Mestreechs", town: "Maastricht", strings: D({
-      kicker: "Eine bandoavond in 't plat",
-      subtitle: "dat klink good",
-      lineupTitle: "Wae kump speule",
-      act1: "Sjoean leedsjes, recht oet 't hart — gezonge in 't plat.",
-      act2: "Rauw indie mèt eine Mestreechter twist dee blijf hange.",
-      act3: "Eine collectief oet de kelder dee de boel op de kop zèt.",
-      infoWhere: "Woea",
-      infoPriceSub: "Mèt aanmelding\nvol = vol",
-      ticketsTitle: "Link veur graotis tickets",
-      ticketsSub: "Eine bandoavond in 't plat — in de Azijnfabriek in Remunj. Vol = vol, dus wees d'r gauw bie.",
-      ticketsBtn: "Reservere dien plaots",
-      footerTag: "dat klink good"
-    }) },
-
-    { code: "zitterds", name: "Zitterds", town: "Sittard", strings: D({
-      kicker: "Ein bandj-oavend in 't plat",
-      act1: "Sjoeën leedjes, recht oet 't hart — gezónge in 't plat.",
-      act2: "Rauwe indie mèt 'ne Zitterse twist dae blief hange.",
-      act3: "'n Collectief oet de kelder dat de boel op z'ne kop zèt.",
-      heroDate: "6 mieërt 2026",
-      infoDate: "6 mieërt 2026",
-      ticketsBtn: "Reserveer dien plaatsj"
-    }) },
-
-    { code: "venloos", name: "Venloos", town: "Venlo", strings: D({
-      kicker: "'n Bandj-aovend in 't plat",
-      act1: "Mooie ledjes, recht oet 't hart — gezónge in 't plat.",
-      act2: "Rouw indie mit 'n Venloos twistje wat blief hange.",
-      act3: "'n Collectief oet de kelder dat de boel op de kop zet.",
-      ticketsBtn: "Reserveer dien plaatsj"
-    }) },
-
-    { code: "kirchroodsj", name: "Kirchröadsj", town: "Kerkrade", strings: D({
-      kicker: "Ing bandj-oavend in 't plat",
-      subtitle: "dat klingk jod",
-      presentLabel: "presentatie va",
-      lineupEyebrow: "'t Programm",
-      lineupTitle: "Wèr kunt sjpele",
-      act1: "Sjun leedsjer, róng oes 't hats — jezónge in 't plat.",
-      act2: "Rauw indie mèt enne Kirchröadsjer twist die blief hange.",
-      act3: "Ing collectief oes de kelder die de saach op d'r kop zètt.",
-      actsHost: "Jepresenteerd va",
-      infoWhen: "Wienieë",
-      infoEntry: "Entree",
-      infoPrice: "Ömzöss",
-      infoPriceSub: "Mèt aanmelding\nvol = vol",
-      ticketsTitle: "Link vér jratis tickets",
-      ticketsSub: "Ing bandj-oavend in 't plat — in de Azijnfabriek in Remunj. Vol = vol, dus wees d'r flot bie.",
-      ticketsBtn: "Reservere ding plaatsj",
-      footerTag: "dat klingk jod",
-      soundLabel: "Jeluud"
-    }) },
-
-    { code: "heeles", name: "Heëls", town: "Heerlen", strings: D({
-      kicker: "'n Bandj-oavend in 't plat",
-      subtitle: "dat klink jód",
-      lineupTitle: "Wae kump sjpele",
-      act1: "Sjun leedjes, recht oes 't hart — gezónge in 't plat.",
-      act2: "Rauw indie mèt 'ne Heëlse twist dae blief hange.",
-      act3: "'n Collectief oes de kelder dat de boel op de kop zèt.",
-      infoPrice: "Ömzöss",
-      ticketsTitle: "Link veur jratis tickets",
-      ticketsBtn: "Reserveer ding plaatsj",
-      footerTag: "dat klink jód",
-      soundLabel: "Jeluud"
-    }) },
-
-    { code: "wieerts", name: "Wieërts", town: "Weert", strings: D({
-      kicker: "'n Bandj-aovend in 't plat",
-      act1: "Sjoeën ledjes, recht oet 't hart — gezónge in 't plat.",
-      act2: "Rouw indie mit 'ne Wieërter twist dae blieuf hange.",
-      act3: "'n Collectief oet de kelder dat de boel op de kop zit.",
-      heroDate: "6 mieërt 2026",
-      infoDate: "6 mieërt 2026",
-      ticketsBtn: "Reserveer dien plaatsj"
-    }) },
-
-    { code: "echts", name: "Echts", town: "Echt", strings: D({
-      kicker: "'n Bandj-oavend in 't plat",
-      act1: "Sjoeën leedjes, recht oet 't hart — gezónge in 't plat.",
-      act2: "Rauwe indie mèt 'ne Echter twist dae blief hange.",
-      act3: "'n Collectief oet de kelder dat de boel op z'ne kop zèt.",
-      heroDate: "6 mieërt 2026",
-      infoDate: "6 mieërt 2026",
-      ticketsBtn: "Reserveer dien plaatsj"
-    }) },
-
-    { code: "valkebergs", name: "Valkebergs", town: "Valkenburg", strings: D({
-      kicker: "'n Bandj-oavend in 't plat",
-      subtitle: "dat klink good",
-      act1: "Sjoean leedsjes, recht oet 't hart — gezonge in 't plat.",
-      act2: "Rauw indie mèt 'ne Valkebergse twist dee blijf hange.",
-      act3: "'ne Collectief oet de kelder dee de boel op de kop zèt.",
-      infoWhere: "Woea",
-      ticketsBtn: "Reservere dien plaots",
-      footerTag: "dat klink good"
-    }) },
-
-    { code: "venroads", name: "Venroads", town: "Venray", strings: D({
-      kicker: "'n Bandj-aovend in 't plat",
-      subtitle: "det klinkt good",
-      act1: "Mooie ledjes, recht oet 't hart — gezónge in 't plat.",
-      act2: "Rouw indie mit 'n Venroads twissie wat blif hange.",
-      act3: "'n Collectief oet de kelder dat de boel op de kop zet.",
-      infoWhere: "Woar",
-      ticketsBtn: "Reserveer ow plek",
-      footerTag: "det klinkt good"
-    }) }
+    {
+      code: "remunjs",
+      name: "Remunjs",
+      town: "Roermond",
+      strings: merge({})
+    },
+    {
+      code: "mestreechs",
+      name: "Mestreechs",
+      town: "Maastricht",
+      strings: merge({
+        kicker: "Eine daags festival in 't plat",
+        subtitle: "dat klink good",
+        dayDoorsLabel: "Inloup daagprogramma",
+        showDoorsLabel: "Inloup oavondshowcase",
+        heroDate: "27 fibberwari 2027",
+        heroTown: "Remunj",
+        programTitle: "'t ganse programma",
+        programIntro: "Vaan teks en taol tot de nuujste Limburgstaolige meziek. Ontdek de ganse festivaldaag.",
+        dayTitle: "Daagprogramma",
+        nightTitle: "Oavondshowcase",
+        timeTba: "tied volg",
+        locationHeading: "Woea",
+        infoTitle: "Limburgs klink vaan noe",
+        translationFooter: "De dialekvertalinge zien veurluipig en weure nog nagekeke mèt dialeksprekers."
+      })
+    },
+    {
+      code: "zitterds",
+      name: "Zitterds",
+      town: "Sittard",
+      strings: merge({
+        kicker: "Ein daags festival in 't plat",
+        dayDoorsLabel: "Inloup daagprogramma",
+        showDoorsLabel: "Inloup oavendshowcase",
+        heroDate: "27 fibberwari 2027",
+        heroTown: "Remunj",
+        programTitle: "'t ganse programma",
+        dayTitle: "Daagprogramma",
+        nightTitle: "Oavendshowcase",
+        infoTitle: "Limburgs klink van noe"
+      })
+    },
+    {
+      code: "venloos",
+      name: "Venloos",
+      town: "Venlo",
+      strings: merge({
+        kicker: "'n Daags festival in 't plat",
+        subtitle: "det klink good",
+        dayDoorsLabel: "Inloup daagprogramma",
+        showDoorsLabel: "Inloup aovendshowcase",
+        heroDate: "27 fibberwari 2027",
+        heroTown: "Remunj",
+        programTitle: "'t ganse programma",
+        dayTitle: "Daagprogramma",
+        nightTitle: "Aovendshowcase",
+        timeTba: "tiéd volg",
+        infoTitle: "Limburgs klink van noe"
+      })
+    },
+    {
+      code: "kirchroodsj",
+      name: "Kirchröadsj",
+      town: "Kerkrade",
+      strings: merge({
+        kicker: "In daags festival in 't plat",
+        subtitle: "dat klingk jod",
+        dayDoorsLabel: "Inloep daagprogramm",
+        showDoorsLabel: "Inloep oavendsjowcase",
+        heroDate: "27 fibberwari 2027",
+        heroTown: "Remunj",
+        programTitle: "'t janse programm",
+        dayTitle: "Daagprogramm",
+        nightTitle: "Oavendsjowcase",
+        timeTba: "tsiet kunt nog",
+        artistLabel: "Artiest",
+        locationHeading: "Woa",
+        infoEyebrow: "Vierwat DIALEK?",
+        infoTitle: "Limburgs klingk va noe",
+        spotifySearch: "Zeuk op Spotify"
+      })
+    },
+    {
+      code: "heeles",
+      name: "Heëls",
+      town: "Heerlen",
+      strings: merge({
+        kicker: "'n Daags festival in 't plat",
+        subtitle: "dat klink jód",
+        dayDoorsLabel: "Inloep daagprogramma",
+        showDoorsLabel: "Inloep oavendshowcase",
+        heroDate: "27 fibberwari 2027",
+        heroTown: "Remunj",
+        programTitle: "'t ganse programma",
+        dayTitle: "Daagprogramma",
+        nightTitle: "Oavendshowcase",
+        infoTitle: "Limburgs klink va noe"
+      })
+    },
+    {
+      code: "wieerts",
+      name: "Wieërts",
+      town: "Weert",
+      strings: merge({
+        kicker: "'n Daags festival in 't plat",
+        subtitle: "det klinktj good",
+        dayDoorsLabel: "Inloup daagprogramma",
+        showDoorsLabel: "Inloup aovendshowcase",
+        heroDate: "27 fibberwari 2027",
+        heroTown: "Remunj",
+        programTitle: "'t ganse programma",
+        dayTitle: "Daagprogramma",
+        nightTitle: "Aovendshowcase",
+        timeTba: "ti-jd volgtj",
+        infoTitle: "Limburgs klinktj van noe"
+      })
+    },
+    {
+      code: "echts",
+      name: "Echts",
+      town: "Echt",
+      strings: merge({
+        kicker: "'n Daags festival in 't plat",
+        dayDoorsLabel: "Inloup daagprogramma",
+        showDoorsLabel: "Inloup oavendshowcase",
+        heroDate: "27 fibberwari 2027",
+        heroTown: "Remunj",
+        programTitle: "'t ganse programma",
+        dayTitle: "Daagprogramma",
+        nightTitle: "Oavendshowcase",
+        infoTitle: "Limburgs klink van noe"
+      })
+    },
+    {
+      code: "valkebergs",
+      name: "Valkebergs",
+      town: "Valkenburg",
+      strings: merge({
+        kicker: "'ne Daags festival in 't plat",
+        subtitle: "dat klink good",
+        dayDoorsLabel: "Inloup daagprogramma",
+        showDoorsLabel: "Inloup oavondshowcase",
+        heroDate: "27 fibberwari 2027",
+        heroTown: "Remunj",
+        programTitle: "'t ganse programma",
+        dayTitle: "Daagprogramma",
+        nightTitle: "Oavondshowcase",
+        locationHeading: "Woea",
+        infoTitle: "Limburgs klink vaan noe"
+      })
+    },
+    {
+      code: "venroads",
+      name: "Venroads",
+      town: "Venray",
+      strings: merge({
+        kicker: "'n Daags festival in 't plat",
+        subtitle: "det klinkt good",
+        dayDoorsLabel: "Inloop dagprogramma",
+        showDoorsLabel: "Inloop aovendshowcase",
+        heroDate: "27 fibberwari 2027",
+        heroTown: "Remunj",
+        programTitle: "'t hele programma",
+        dayTitle: "Dagprogramma",
+        nightTitle: "Aovendshowcase",
+        timeTba: "tiêd volgt",
+        locationHeading: "Woar",
+        infoTitle: "Limburgs klinkt van now"
+      })
+    }
   ];
 
   window.DIALEK_I18N = { dialects: DIALECTS, defaultCode: "remunjs" };

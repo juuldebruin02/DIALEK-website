@@ -1,38 +1,42 @@
-# DIALEK. — *det klink good*
+# DIALEK. 2027
 
-A one-page parallax website for the Limburgs-dialect event **DIALEK.**, built
-from the original Instagram poster (*Unne bandoavend in 't plat — 6 meert 2026,
-De Azijnfabriek, Remunj*).
+One-page festivalsite voor DIALEK op 27 februari 2027 in de ECI Cultuurfabriek in Roermond.
 
-## Features
+## Lokaal bekijken
 
-- **Parallax everywhere** — a fixed vintage sky (gradient + film grain) with
-  three cloud layers that drift at different depths on scroll, plus
-  pointer-driven drift and per-section parallax.
-- **Bungelende vlaai** — the slice of *vlaai* hangs from a string and swings
-  like a pendulum (`bungel` + `vlaai-sway` keyframes), pivoting from where the
-  string is tied.
-- **Staggered text** — the title splits into characters and the subtitles into
-  words, each revealing with a cascading delay; remaining sections stagger in
-  on scroll via `IntersectionObserver`.
-- Responsive, and respects `prefers-reduced-motion`.
-
-## Image assets
-
-The imagery is cut directly from the poster photo (no drawn vlaai):
-
-- `assets/vlaai.png` — the pie slice, background removed via
-  connected-component color keying.
-- `assets/cloud.png` — a soft cloud puff, blue keyed to transparent and
-  feathered for seamless parallax tiling.
-
-## Run
-
-Just open `index.html`, or serve the folder:
+De site bestaat uit statische HTML, CSS en JavaScript. Start vanuit deze map een lokale server:
 
 ```sh
-python3 -m http.server 8000
-# → http://localhost:8000
+python3 -m http.server 4173
 ```
 
-Files: `index.html`, `styles.css`, `script.js`, `assets/`.
+Open daarna `http://localhost:4173`.
+
+## Inhoud en vertalingen
+
+Alle wisselende dialectteksten staan centraal in `i18n.js`. `BASE` bevat de Remunjse werkversie; iedere dialectvariant overschrijft alleen de teksten die afwijken. De huidige vertalingen zijn voorlopige redactieteksten en worden nog gecontroleerd door dialectsprekers.
+
+Bij het aanleveren van definitieve vertalingen zijn per wijziging nodig:
+
+- de sleutel uit `i18n.js`;
+- de huidige Nederlandse of Remunjse brontekst;
+- de goedgekeurde dialecttekst;
+- naam of initialen van de controleur.
+
+## Nog te vervangen placeholders
+
+- directe ticketlink van de DIALEK-pagina bij ECI;
+- Google Form-link voor de DIALEK Taalmatch;
+- exacte tijdsloten van het dagprogramma en de acts;
+- geverifieerde Spotify-profielen;
+- definitieve artiestenbiografieën;
+- definitieve interactieve taalactiviteiten en partnerstatussen;
+- gecontroleerde teksten voor alle dialectvarianten.
+
+## Belangrijkste bestanden
+
+- `index.html` — pagina-inhoud en programmastructuur;
+- `styles.css` — visuele stijl, responsive layout en animaties;
+- `script.js` — dialectwisseling, uitklapkaarten, reveals en parallax;
+- `i18n.js` — centrale dialectteksten;
+- `assets/` — vlaai- en wolkenassets.
