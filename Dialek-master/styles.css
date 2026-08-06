@@ -290,6 +290,7 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   letter-spacing: .15em;
   text-transform: uppercase;
+  translate: 0 -7px;
 }
 
 .kicker__rule {
@@ -331,11 +332,11 @@ a { color: inherit; text-decoration: none; }
 .subtitle {
   margin: .28em 0 0;
   color: var(--cream);
-  font-family: "League Spartan", sans-serif;
-  font-size: clamp(1.75rem, 6.4vw, 5.4rem);
-  font-weight: 700;
-  line-height: .95;
-  letter-spacing: -.035em;
+  font-family: "Archivo Black", "League Spartan", sans-serif;
+  font-size: clamp(1.75rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: .92;
+  letter-spacing: -.045em;
   text-shadow: 0 6px 22px rgba(10, 25, 35, .3);
 }
 
@@ -391,13 +392,13 @@ a { color: inherit; text-decoration: none; }
   position: absolute;
   z-index: -1;
   left: 50%;
-  bottom: calc(100% - 15px);
-  width: 3px;
-  height: 175px;
+  bottom: calc(100% - 12px);
+  width: clamp(4.5px, 1.8%, 5.5px);
+  height: clamp(135px, 18vh, 175px);
   transform: translateX(-50%);
-  background: linear-gradient(180deg, rgba(243, 236, 220, 0), #d4c29e 36%, #a9875a);
-  border-radius: 2px;
-  box-shadow: 1px 0 rgba(42, 34, 25, .17);
+  background: url("assets/vlaai-rope-extension.png") center bottom / 100% auto repeat-y;
+  filter: drop-shadow(1px 0 1px rgba(42, 34, 25, .22));
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .18) 28%, #000 45%);
 }
 
 .vlaai {
@@ -942,7 +943,7 @@ a { color: inherit; text-decoration: none; }
 @media (min-width: 901px) and (max-height: 860px) {
   html { scroll-padding-top: 72px; }
   .hero { padding-top: clamp(96px, calc(8.6vh + 34px), 108px); }
-  .kicker { margin-bottom: clamp(8px, 1.5vh, 13px); }
+  .kicker { margin-bottom: clamp(8px, 1.5vh, 13px); translate: 0 -3px; }
   .title { font-size: clamp(15.2rem, calc(32vh + 12px), 18rem); }
   .subtitle {
     margin-top: .2em;
@@ -983,7 +984,7 @@ a { color: inherit; text-decoration: none; }
     padding: 154px 13px 190px;
   }
 
-  .kicker { gap: 10px; margin-bottom: 23px; font-size: .57rem; letter-spacing: .1em; }
+  .kicker { gap: 10px; margin-bottom: 15px; font-size: .57rem; letter-spacing: .1em; translate: 0; }
   .kicker__rule { width: clamp(28px, 11vw, 44px); }
   .hero__inner { width: 100%; transform: translateY(-22px); }
   .title { font-size: clamp(4.65rem, 22.6vw, 8rem); }
