@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="li" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#5a7e98" />
+  <title>DIALEK. — det klink good</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23244a60'/%3E%3Ccircle cx='16' cy='20' r='6' fill='%23e8b65a'/%3E%3C/svg%3E" />
+  <meta name="description" content="Unne bandoavend in 't plat. 6 meert 2026 in de Azijnfabriek in Remunj. Link veur gratis tickets." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DIALEK. — det klink good" />
+  <meta property="og:description" content="Unne bandoavend in 't plat. 6 meert 2026 — De Azijnfabriek, Remunj." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Replace the no-js class as early as possible -->
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+
+  <!-- ===== Progress bar ===== -->
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+  <!-- ===== Sound toggle ===== -->
+  <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false"
+          aria-label="Geluid aanzètte">
+    <span class="sound-toggle__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9v6h4l5 4V5L7 9H3z"/>
+        <path class="sound-toggle__wave" d="M16 9a4 4 0 010 6"/>
+        <path class="sound-toggle__wave" d="M19 6a8 8 0 010 12"/>
+        <line class="sound-toggle__slash" x1="3" y1="3" x2="22" y2="22" stroke-width="2.4"/>
+      </svg>
+    </span>
+    <span class="sound-toggle__label" data-i18n="soundLabel">Geluid</span>
+  </button>
+
+  <!-- ===== Fixed parallax sky background (sits behind everything) ===== -->
+  <div class="sky" aria-hidden="true">
+    <div class="sky__gradient"></div>
+    <div class="sky__grain"></div>
+    <!-- cloud layers, each moves at a different parallax depth -->
+    <div class="clouds clouds--far"   data-depth="0.03"></div>
+    <div class="clouds clouds--mid"   data-depth="0.06"></div>
+    <div class="clouds clouds--near"  data-depth="0.10"></div>
+    <div class="sky__vignette"></div>
+  </div>
+
+  <!-- ===== Top navigation ===== -->
+  <header class="nav" id="top">
+    <a class="nav__brand" href="#top" aria-label="DIALEK home">DIALEK<span>.</span></a>
+    <nav class="nav__links" aria-label="Hoofdmenu">
+      <label class="nav__lang">
+        <svg class="nav__lang-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 5h12M9 3v2M11 5c0 5-4 8-7 8M6 8c0 3 3 5 7 6"/>
+          <path d="M14 19l3-7 3 7M14.5 17h5"/>
+        </svg>
+        <select class="nav__select" id="dialectSelect" aria-label="Kies dien dialek"></select>
+      </label>
+      <a href="#lineup" data-i18n="navLineup">Line-up</a>
+      <a href="#info" data-i18n="navInfo">Info</a>
+      <a href="#tickets" class="nav__cta" data-i18n="navTickets">Tickets</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+        <!-- kicker with the two flanking rules -->
+        <p class="kicker reveal" data-reveal="kicker">
+          <span class="kicker__rule"></span>
+          <span class="kicker__text" data-i18n="kicker">Unne bandoavend in 't plat</span>
+          <span class="kicker__rule"></span>
+        </p>
+
+        <!-- giant title, letters staggered -->
+        <h1 class="title" data-split aria-label="DIALEK.">DIALEK<span class="title__dot">.</span></h1>
+
+        <!-- subtitle, words staggered -->
+        <p class="subtitle" data-split-words data-i18n="subtitle" aria-label="det klink good">det klink good</p>
+      </div>
+
+      <!-- The dangling, swinging vlaai (real photo cut-out from the poster).
+           Layers are nested so the transforms never fight:
+           rig = scroll parallax · drop = one-time fall-in · swing = pendulum -->
+      <div class="vlaai-rig" data-parallax data-depth="0.12">
+        <div class="vlaai-drop">
+          <button class="vlaai-swing" id="vlaai" type="button"
+                  aria-label="Loat de vlaai opnuujt valle (mit geluid)">
+            <span class="string" aria-hidden="true"></span>
+            <img class="vlaai" src="assets/vlaai.png"
+                 alt="Een stök Limburgse vlaai dat aan 'n touwke bungelt"
+                 width="488" height="712" />
+          </button>
+        </div>
+      </div>
+
+      <!-- floating poster credits over the hero -->
+      <ul class="hero__lineup" aria-label="Line-up">
+        <li class="reveal" data-reveal>Sophie Albert</li>
+        <li class="reveal" data-reveal>In Limbo</li>
+        <li class="reveal" data-reveal>The Basement Collective</li>
+      </ul>
+
+      <div class="hero__present reveal" data-reveal>
+        <span class="hero__present-label" data-i18n="presentLabel">presentatie door</span>
+        <span class="hero__present-name">Lotte oet Limburg</span>
+      </div>
+
+      <div class="hero__when reveal" data-reveal>
+        <span data-i18n="heroDate">6 meert 2026</span>
+        <span data-i18n="heroDoors">inloup 19:30 oer</span>
+        <span data-i18n="heroVenue">De Azijnfabriek, Remunj</span>
+      </div>
+
+      <a class="scroll-hint" href="#lineup" aria-label="Scroll naar beneje">
+        <span data-i18n="scrollHint">scroll</span>
+        <span class="scroll-hint__arrow"></span>
+      </a>
+    </section>
+
+    <!-- ================= LINE-UP ================= -->
+    <section class="panel panel--lineup" id="lineup">
+      <div class="panel__head">
+        <p class="eyebrow reveal" data-reveal data-i18n="lineupEyebrow">'t Programma</p>
+        <h2 class="panel__title reveal" data-reveal data-split-words data-i18n="lineupTitle" aria-label="Wae kump speule">Wae kump speule</h2>
+      </div>
+
+      <div class="acts">
+        <article class="act reveal" data-reveal>
+          <span class="act__num">01</span>
+          <h3 class="act__name">Sophie Albert</h3>
+          <p class="act__desc" data-i18n="act1">Luuke liedjes, recht oet 't hart — gezonge in 't plat.</p>
+        </article>
+        <article class="act reveal" data-reveal>
+          <span class="act__num">02</span>
+          <h3 class="act__name">In Limbo</h3>
+          <p class="act__desc" data-i18n="act2">Rauwe indie mit 'n Limburgse twist die blief hange.</p>
+        </article>
+        <article class="act reveal" data-reveal>
+          <span class="act__num">03</span>
+          <h3 class="act__name">The Basement Collective</h3>
+          <p class="act__desc" data-i18n="act3">'n Collectief oet de kelder dat de boel op z'n kop zit.</p>
+        </article>
+      </div>
+
+      <p class="acts__host reveal" data-reveal>
+        <span data-i18n="actsHost">Gepresenteerd door</span> <strong>Lotte oet Limburg</strong>
+      </p>
+    </section>
+
+    <section class="panel panel--info" id="info">
+      <div class="info__grid">
+        <div class="info__card reveal" data-reveal>
+          <h3 data-i18n="infoWhen">Wanneer</h3>
+          <p class="info__big" data-i18n="infoDate">6 meert 2026</p>
+          <p data-i18n="infoDoors">Inloup 19:30 oer<br/>Aanvang 20:00 oer</p>
+        </div>
+        <div class="info__card reveal" data-reveal>
+          <h3 data-i18n="infoWhere">Woa</h3>
+          <p class="info__big" data-i18n="infoVenueBig">De Azijnfabriek</p>
+          <p data-i18n="infoVenueSub">Remunj (Roermond)<br/>Limburg, NL</p>
+        </div>
+        <div class="info__card reveal" data-reveal>
+          <h3 data-i18n="infoEntry">Entree</h3>
+          <p class="info__big" data-i18n="infoPrice">Gratis</p>
+          <p data-i18n="infoPriceSub">Mit aanmelding<br/>vol = vol</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TICKETS / CTA ================= -->
+    <section class="panel panel--tickets" id="tickets">
+      <div class="tickets__inner reveal" data-reveal>
+        <h2 class="tickets__title" data-split-words data-i18n="ticketsTitle" aria-label="Link veur gratis tickets">Link veur gratis tickets</h2>
+        <p class="tickets__sub" data-i18n="ticketsSub">Unne bandoavend in 't plat — in de Azijnfabriek in Remunj. Vol = vol, dus wees d'r snel bie.</p>
+        <a class="btn" href="#" onclick="return false;" data-i18n="ticketsBtn">Reserveer dien plek</a>
+        <p class="tickets__note">@dialekevenement</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="footer__brand">DIALEK<span>.</span></span>
+    <span class="footer__tag" data-i18n="footerTag">det klink good</span>
+    <span class="footer__meta" data-i18n="footerMeta">© 2026 · De Azijnfabriek, Remunj</span>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
