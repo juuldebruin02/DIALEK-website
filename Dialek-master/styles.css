@@ -321,13 +321,42 @@ a { color: inherit; text-decoration: none; }
 }
 .vlaai-swing:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 14px; border-radius: 8px; }
 
+/* --string-overlap: how far the twine tucks *into* the slice, as a % of the
+   image height. bottom: is offset by the same amount that height: gains, so
+   the tie point at the top stays put and only the bottom end grows down.
+
+   The twine itself is drawn with gradients rather than cropped out of
+   vlaai.png: the photo only has ~35px of clean cord before it flares into
+   the knot, and where it crosses the crust it's the same warm tan as the
+   pastry — there's no strip in there to tile. Palette and twist pitch are
+   sampled from that stub instead (shadow #6b5433 · mid #b19669 · lit #dcbb8e).
+   Layers, top to bottom:
+     1. twist — fibre bands raked to ~68°, the pitch of the real cord
+     2. ply   — a slower, unrelated period (23px vs 6.8px) so the two never
+                line back up and the twist can't read as a repeating pattern
+     3. body  — cross-section shading: dark rim, lit just off-centre */
 .string {
+  --string-overlap: 16%;
+  --twine: clamp(3px, .45vw, 5px);
   position: absolute;
-  left: 50%; bottom: 100%;
-  width: 3px; height: clamp(60px, 16vh, 150px);
+  left: 50%; bottom: calc(100% - var(--string-overlap));
+  width: var(--twine);
+  height: calc(clamp(60px, 16vh, 150px) + var(--string-overlap));
   transform: translateX(-50%);
-  background: linear-gradient(180deg, rgba(243,236,220,.0), #cdb892 40%, #b59a6a);
-  border-radius: 2px;
+  border-radius: calc(var(--twine) / 2);
+  background-image:
+    repeating-linear-gradient(-68deg,
+      rgba(72,54,30,.60)    0     1.2px, rgba(72,54,30,0)    1.2px 2.8px,
+      rgba(240,224,193,.55) 2.8px 4px,   rgba(240,224,193,0) 4px   6.8px),
+    repeating-linear-gradient(180deg,
+      rgba(58,42,22,.28)    0     3px,   rgba(58,42,22,0)    3px   11px,
+      rgba(255,246,224,.22) 11px  15px,  rgba(255,246,224,0) 15px  23px),
+    linear-gradient(90deg,
+      #6b5433 0%, #8d7350 16%, #c8ab7d 40%, #dcbb8e 52%, #a98d63 74%, #6b5433 100%);
+  /* frays away at the top instead of ending on a hard cut */
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%);
+          mask-image: linear-gradient(180deg, transparent 0, #000 14%);
+  filter: drop-shadow(0 2px 3px rgba(12,26,34,.35));  /* reads over the crust */
 }
 .vlaai {
   display: block;
