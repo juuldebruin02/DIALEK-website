@@ -406,17 +406,11 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: auto;
   filter: drop-shadow(0 25px 30px rgba(12, 26, 34, .38));
-  animation: vlaai-breathe 7.4s ease-in-out 1.35s infinite;
 }
 
 @keyframes bungel {
   0%, 100% { transform: rotate(-2.8deg); }
   50% { transform: rotate(2.8deg); }
-}
-
-@keyframes vlaai-breathe {
-  0%, 100% { transform: rotate(.25deg); }
-  50% { transform: rotate(-.25deg); }
 }
 
 .hero__facts {
@@ -808,6 +802,17 @@ a { color: inherit; text-decoration: none; }
 
 .schedule-card--artist .schedule-card__time { font-size: clamp(1.9rem, 4vw, 3.2rem); }
 .schedule-card--tba { border-style: dashed; }
+
+.schedule-card--artist.is-open::after {
+  content: "";
+  position: absolute;
+  z-index: 8;
+  inset: -1px;
+  pointer-events: none;
+  border: 2px solid var(--gold-light);
+  border-radius: inherit;
+  box-shadow: inset 4px 0 0 var(--gold-light);
+}
 
 .schedule-card__detail-inner--artist {
   display: block;
