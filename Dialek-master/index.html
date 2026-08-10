@@ -3,196 +3,397 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#5a7e98" />
-  <title>DIALEK. — det klink good</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23244a60'/%3E%3Ccircle cx='16' cy='20' r='6' fill='%23e8b65a'/%3E%3C/svg%3E" />
-  <meta name="description" content="Unne bandoavend in 't plat. 6 meert 2026 in de Azijnfabriek in Remunj. Link veur gratis tickets." />
+  <meta name="theme-color" content="#567c98" />
+  <title>DIALEK. — eendaags festival in 't plat</title>
+  <meta name="description" content="DIALEK is een eendaags festival voor een nieuwe generatie Limburgstalige makers. 27 februari 2027 in de ECI Cultuurfabriek in Roermond." />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="DIALEK. — det klink good" />
-  <meta property="og:description" content="Unne bandoavend in 't plat. 6 meert 2026 — De Azijnfabriek, Remunj." />
+  <meta property="og:description" content="Een eendaags festival in 't plat. 27 februari 2027 in de ECI Cultuurfabriek, Roermond." />
   <meta property="og:type" content="website" />
 
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23244a60'/%3E%3Crect x='12' y='17' width='8' height='8' rx='1' fill='%23e8b65a'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Black&amp;family=League+Spartan:wght@600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=2027-10" />
 </head>
 <body>
-  <!-- Replace the no-js class as early as possible -->
   <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
 
-  <!-- ===== Progress bar ===== -->
+  <a class="skip-link" href="#main">Naar de inhoud</a>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-  <!-- ===== Sound toggle ===== -->
-  <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false"
-          aria-label="Geluid aanzètte">
-    <span class="sound-toggle__icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 9v6h4l5 4V5L7 9H3z"/>
-        <path class="sound-toggle__wave" d="M16 9a4 4 0 010 6"/>
-        <path class="sound-toggle__wave" d="M19 6a8 8 0 010 12"/>
-        <line class="sound-toggle__slash" x1="3" y1="3" x2="22" y2="22" stroke-width="2.4"/>
-      </svg>
-    </span>
-    <span class="sound-toggle__label" data-i18n="soundLabel">Geluid</span>
-  </button>
-
-  <!-- ===== Fixed parallax sky background (sits behind everything) ===== -->
   <div class="sky" aria-hidden="true">
     <div class="sky__gradient"></div>
     <div class="sky__grain"></div>
-    <!-- cloud layers, each moves at a different parallax depth -->
-    <div class="clouds clouds--far"   data-depth="0.03"></div>
-    <div class="clouds clouds--mid"   data-depth="0.06"></div>
-    <div class="clouds clouds--near"  data-depth="0.10"></div>
+    <div class="clouds clouds--far" data-depth="0.025"></div>
+    <div class="clouds clouds--mid" data-depth="0.05"></div>
+    <div class="clouds clouds--near" data-depth="0.08"></div>
     <div class="sky__vignette"></div>
   </div>
 
-  <!-- ===== Top navigation ===== -->
   <header class="nav" id="top">
     <a class="nav__brand" href="#top" aria-label="DIALEK home">DIALEK<span>.</span></a>
+
     <nav class="nav__links" aria-label="Hoofdmenu">
-      <label class="nav__lang">
-        <svg class="nav__lang-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M4 5h12M9 3v2M11 5c0 5-4 8-7 8M6 8c0 3 3 5 7 6"/>
-          <path d="M14 19l3-7 3 7M14.5 17h5"/>
-        </svg>
-        <select class="nav__select" id="dialectSelect" aria-label="Kies dien dialek"></select>
-      </label>
-      <a href="#lineup" data-i18n="navLineup">Line-up</a>
+      <div class="nav__language">
+        <label class="nav__lang">
+          <svg class="nav__lang-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 5h12M9 3v2M11 5c0 5-4 8-7 8M6 8c0 3 3 5 7 6" />
+            <path d="M14 19l3-7 3 7M14.5 17h5" />
+          </svg>
+          <select class="nav__select" id="dialectSelect" aria-label="Kies dien dialek"></select>
+        </label>
+        <span class="nav__language-note" data-i18n="dialectNote">vertaling in ontwikkeling</span>
+      </div>
+      <a href="#programma" data-i18n="navProgram">Programma</a>
       <a href="#info" data-i18n="navInfo">Info</a>
-      <a href="#tickets" class="nav__cta" data-i18n="navTickets">Tickets</a>
+      <a href="https://ecicultuurfabriek.nl/" target="_blank" rel="noopener" class="nav__cta">
+        <span data-i18n="navTickets">Tickets</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" /></svg>
+      </a>
     </nav>
   </header>
 
-  <main>
-    <!-- ================= HERO ================= -->
-    <section class="hero" id="hero">
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="hero__inner">
-        <!-- kicker with the two flanking rules -->
         <p class="kicker reveal" data-reveal="kicker">
           <span class="kicker__rule"></span>
-          <span class="kicker__text" data-i18n="kicker">Unne bandoavend in 't plat</span>
+          <span class="kicker__text" data-i18n="kicker">Ein daags festival in 't plat</span>
           <span class="kicker__rule"></span>
         </p>
 
-        <!-- giant title, letters staggered -->
-        <h1 class="title" data-split aria-label="DIALEK.">DIALEK<span class="title__dot">.</span></h1>
-
-        <!-- subtitle, words staggered -->
+        <h1 class="title" id="hero-title" data-split aria-label="DIALEK.">DIALEK<span class="title__dot">.</span></h1>
         <p class="subtitle" data-split-words data-i18n="subtitle" aria-label="det klink good">det klink good</p>
       </div>
 
-      <!-- The dangling, swinging vlaai (real photo cut-out from the poster).
-           Layers are nested so the transforms never fight:
-           rig = scroll parallax · drop = one-time fall-in · swing = pendulum -->
-      <div class="vlaai-rig" data-parallax data-depth="0.12">
+      <div class="vlaai-rig" data-parallax data-depth="0.09" aria-hidden="true">
         <div class="vlaai-drop">
-          <button class="vlaai-swing" id="vlaai" type="button"
-                  aria-label="Loat de vlaai opnuujt valle (mit geluid)">
-            <span class="string" aria-hidden="true"></span>
-            <img class="vlaai" src="assets/vlaai.webp"
-                 alt="Een stök Limburgse vlaai dat aan 'n touwke bungelt"
-                 width="488" height="712" />
-          </button>
+          <div class="vlaai-swing">
+            <span class="string"></span>
+            <img class="vlaai" src="assets/vlaai-clean.png" alt="" width="1023" height="1537" />
+          </div>
         </div>
       </div>
 
-      <!-- floating poster credits over the hero -->
-      <ul class="hero__lineup" aria-label="Line-up">
-        <li class="reveal" data-reveal>Sophie Albert</li>
-        <li class="reveal" data-reveal>In Limbo</li>
-        <li class="reveal" data-reveal>The Basement Collective</li>
-      </ul>
-
-      <div class="hero__present reveal" data-reveal>
-        <span class="hero__present-label" data-i18n="presentLabel">presentatie door</span>
-        <span class="hero__present-name">Lotte oet Limburg</span>
+      <div class="hero__facts hero__facts--times reveal" data-reveal>
+        <p>
+          <span class="hero__fact-label" data-i18n="dayDoorsLabel">Inloup dagprogramma</span>
+          <strong>12:00</strong>
+        </p>
+        <p>
+          <span class="hero__fact-label" data-i18n="showDoorsLabel">Inloup aovendshowcase</span>
+          <strong>19:30</strong>
+        </p>
       </div>
 
-      <div class="hero__when reveal" data-reveal>
-        <span data-i18n="heroDate">6 meert 2026</span>
-        <span data-i18n="heroDoors">inloup 19:30 oer</span>
-        <span data-i18n="heroVenue">De Azijnfabriek, Remunj</span>
+      <div class="hero__facts hero__facts--where reveal" data-reveal>
+        <p><strong data-i18n="heroDate">27 fibberwari 2027</strong></p>
+        <p>
+          <span>ECI Cultuurfabriek</span>
+          <span data-i18n="heroTown">Remunj</span>
+        </p>
       </div>
 
-      <a class="scroll-hint" href="#lineup" aria-label="Scroll naar beneje">
-        <span data-i18n="scrollHint">scroll</span>
+      <a class="scroll-hint" href="#programma" aria-label="Scroll naar het programma">
+        <span data-i18n="scrollHint">bekiek 't programma</span>
         <span class="scroll-hint__arrow"></span>
       </a>
     </section>
 
-    <!-- ================= LINE-UP ================= -->
-    <section class="panel panel--lineup" id="lineup">
-      <div class="panel__head">
-        <p class="eyebrow reveal" data-reveal data-i18n="lineupEyebrow">'t Programma</p>
-        <h2 class="panel__title reveal" data-reveal data-split-words data-i18n="lineupTitle" aria-label="Wae kump speule">Wae kump speule</h2>
+    <section class="panel program" id="programma" aria-labelledby="program-title">
+      <div class="panel__head reveal" data-reveal>
+        <p class="eyebrow" data-i18n="programEyebrow">27 fibberwari 2027 · ECI Cultuurfabriek</p>
+        <h2 class="panel__title" id="program-title" data-split-words data-i18n="programTitle" aria-label="'t ganse programma">'t ganse programma</h2>
+        <p class="panel__intro" data-i18n="programIntro">Van tekst en taol tot de nuujste Limburgstalige muziek. Ontdek de ganse festivaldaag.</p>
       </div>
 
-      <div class="acts">
-        <article class="act reveal" data-reveal>
-          <span class="act__num">01</span>
-          <h3 class="act__name">Sophie Albert</h3>
-          <p class="act__desc" data-i18n="act1">Luuke liedjes, recht oet 't hart — gezonge in 't plat.</p>
-        </article>
-        <article class="act reveal" data-reveal>
-          <span class="act__num">02</span>
-          <h3 class="act__name">In Limbo</h3>
-          <p class="act__desc" data-i18n="act2">Rauwe indie mit 'n Limburgse twist die blief hange.</p>
-        </article>
-        <article class="act reveal" data-reveal>
-          <span class="act__num">03</span>
-          <h3 class="act__name">The Basement Collective</h3>
-          <p class="act__desc" data-i18n="act3">'n Collectief oet de kelder dat de boel op z'n kop zit.</p>
-        </article>
-      </div>
+      <section class="program-block program-block--day" aria-labelledby="day-title">
+        <header class="program-block__head reveal" data-reveal>
+          <div>
+            <p class="program-block__kicker" data-i18n="dayKicker">Cultuurcafé · vanaaf 12:00</p>
+            <h3 id="day-title" data-i18n="dayTitle">Daagprogramma</h3>
+          </div>
+          <p data-i18n="dayNote">De definitieve tiedsjlotte volge later.</p>
+        </header>
 
-      <p class="acts__host reveal" data-reveal>
-        <span data-i18n="actsHost">Gepresenteerd door</span> <strong>Lotte oet Limburg</strong>
-      </p>
+        <div class="schedule-list" data-accordion-group>
+          <article class="schedule-card reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="day-text-detail">
+              <span class="schedule-card__time" data-i18n="timeTba">tied volg</span>
+              <span class="schedule-card__summary">
+                <span class="schedule-card__type" data-i18n="dayProgramLabel">Daagprogramma</span>
+                <strong data-i18n="textStageTitle">Tekstverslaafd-podium</strong>
+                <span data-i18n="textStageShort">Limburgstalige poëzie, spoken word, liedjes en verhaole.</span>
+              </span>
+              <span class="schedule-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="schedule-card__detail" id="day-text-detail">
+              <div class="schedule-card__detail-inner">
+                <p data-i18n="textStageLong">Drik Heffels en Stichting Tekstverslaafd make plek veur Limburgstalige dichters, spoken word-artieste, singer-songwriters en angere tekstmakers. Ein toegankelijke plek woa nuuj talent werk kan oetprebere en podiumervaring opdeit.</p>
+                <span class="detail-status" data-i18n="programFollows">Volledig programma volgt</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-card reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="day-match-detail">
+              <span class="schedule-card__time" data-i18n="timeTba">tied volg</span>
+              <span class="schedule-card__summary">
+                <span class="schedule-card__type" data-i18n="dayProgramLabel">Daagprogramma</span>
+                <strong>DIALEK Taalmatch</strong>
+                <span data-i18n="matchShort">Jónk en aad in gesprek euver de taol van toen, noe en later.</span>
+              </span>
+              <span class="schedule-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="schedule-card__detail" id="day-match-detail">
+              <div class="schedule-card__detail-inner">
+                <p data-i18n="matchLong">De Taalmatch koppelt ein jongere Limburgsspreker of geïnteresseerde bezeuker aan ein oudere Limburgsspreker. Mit ein korte gesprekskaart deile ze herinneringe, ervaringen en hun blik op de toekomst van 't Limburgs.</p>
+                <button class="btn btn--small btn--placeholder" type="button" disabled data-i18n="matchCta">Aanmeldlink volgt</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-card reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="day-language-detail">
+              <span class="schedule-card__time" data-i18n="timeTba">tied volg</span>
+              <span class="schedule-card__summary">
+                <span class="schedule-card__type" data-i18n="dayProgramLabel">Daagprogramma</span>
+                <strong data-i18n="languageTitle">Interactieve taalactiviteiten</strong>
+                <span data-i18n="languageShort">Speul, deel en ontdek wat 't Limburgs veur dich beteikent.</span>
+              </span>
+              <span class="schedule-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="schedule-card__detail" id="day-language-detail">
+              <div class="schedule-card__detail-inner">
+                <p data-i18n="languageLong">Dink aan ein Limburgse taalquiz, ein kaart mit favoriete wäörd en streekvariante, of ein live podcast woa bezeukers bie aansloete. De definitieve vörm weurt same mit potentiële partner Limburgs Museum oetgewirk.</p>
+                <span class="detail-status detail-status--pending" data-i18n="inDevelopment">In ontwikkeling</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-card reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="day-network-detail">
+              <span class="schedule-card__time" data-i18n="timeTba">tied volg</span>
+              <span class="schedule-card__summary">
+                <span class="schedule-card__type" data-i18n="dayProgramLabel">Daagprogramma</span>
+                <strong data-i18n="networkTitle">Netwerkevenement</strong>
+                <span data-i18n="networkShort">Ein ontmoetingsplek veur makers, programmeurs en professionals.</span>
+              </span>
+              <span class="schedule-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="schedule-card__detail" id="day-network-detail">
+              <div class="schedule-card__detail-inner">
+                <p data-i18n="networkLong">In 't Cultuurcafé kriege makers, programmeurs en professionals oet de Limburgstalige culturele sector de ruumte om kennis te deile, contacten te legge en nuuj samewerkinge te starte.</p>
+                <span class="detail-status" data-i18n="programFollows">Volledig programma volgt</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="program-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+
+      <section class="program-block program-block--night" aria-labelledby="night-title">
+        <header class="program-block__head reveal" data-reveal>
+          <div>
+            <p class="program-block__kicker" data-i18n="nightKicker">Popzaal · inloup 19:30 · start 20:00</p>
+            <h3 id="night-title" data-i18n="nightTitle">Aovendshowcase</h3>
+          </div>
+          <p data-i18n="nightNote">Vief acts, twee showblokke, ein nuuj generatie Limburgstalige makers.</p>
+        </header>
+
+        <div class="show-block-label reveal" data-reveal>
+          <span data-i18n="showBlockOne">Showblok 01</span><strong>20:00–21:00</strong>
+        </div>
+
+        <div class="schedule-list schedule-list--artists" data-accordion-group>
+          <article class="schedule-card schedule-card--artist reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="artist-sophie-detail">
+              <span class="schedule-card__time">01</span>
+              <span class="schedule-card__summary">
+                <span class="schedule-card__type" data-i18n="artistLabel">Artiest</span>
+                <strong>Sophie Albert</strong>
+                <span data-i18n="sophieShort">Limburgstalige liedjes, dichtbij en recht oet 't hart.</span>
+              </span>
+              <span class="schedule-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="schedule-card__detail" id="artist-sophie-detail">
+              <div class="schedule-card__detail-inner schedule-card__detail-inner--artist">
+                <div class="artist-detail__copy">
+                  <p data-i18n="sophieLong">Sophie Albert geuf 't Limburgs ein persoonlijke, eigentiedse plek. Verwach liedjes die klein dörve te beginne en op 't podium groots binnekomme. Deze artiestentekst is veurluipig en weurt later aangevuld.</p>
+                  <a class="spotify-link" href="https://open.spotify.com/search/Sophie%20Albert" target="_blank" rel="noopener"><span aria-hidden="true">▶</span><span data-i18n="spotifySearch">Zeuk op Spotify</span></a>
+                </div>
+                <figure class="artist-photo artist-photo--placeholder artist-photo--sophie" data-artist="Sophie Albert">
+                  <figcaption class="artist-photo__caption"><span data-i18n="artistPhotoLabel">Artiestenfoto</span><strong>Sophie Albert</strong><small data-i18n="photoFollows">Beeld volgt</small></figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-card schedule-card--artist schedule-card--tba reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="artist-tba-detail">
+              <span class="schedule-card__time">02</span>
+              <span class="schedule-card__summary">
+                <span class="schedule-card__type" data-i18n="artistLabel">Artiest</span>
+                <strong>TBA</strong>
+                <span data-i18n="tbaShort">Ein nuuj Limburgstalige act weurt later bekindgemaak.</span>
+              </span>
+              <span class="schedule-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="schedule-card__detail" id="artist-tba-detail">
+              <div class="schedule-card__detail-inner schedule-card__detail-inner--artist">
+                <div class="artist-detail__copy">
+                  <p data-i18n="tbaLong">De viefde act van de aovendshowcase is nog neet bekind. Volg DIALEK veur de aankondiging.</p>
+                  <span class="detail-status detail-status--pending" data-i18n="toBeAnnounced">Wordt bekendgemaakt</span>
+                </div>
+                <figure class="artist-photo artist-photo--placeholder artist-photo--tba" data-artist="TBA">
+                  <figcaption class="artist-photo__caption"><span data-i18n="artistPhotoLabel">Artiestenfoto</span><strong>TBA</strong><small data-i18n="photoFollows">Beeld volgt</small></figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="pause-row reveal" data-reveal>
+          <span data-i18n="pause">Pauze</span><strong>21:00–21:15</strong>
+        </div>
+
+        <div class="show-block-label reveal" data-reveal>
+          <span data-i18n="showBlockTwo">Showblok 02</span><strong>21:15–22:30</strong>
+        </div>
+
+        <div class="schedule-list schedule-list--artists" data-accordion-group>
+          <article class="schedule-card schedule-card--artist reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="artist-limbo-detail">
+              <span class="schedule-card__time">03</span>
+              <span class="schedule-card__summary">
+                <span class="schedule-card__type" data-i18n="artistLabel">Artiest</span>
+                <strong>In Limbo</strong>
+                <span data-i18n="limboShort">Rauwe indie mit ein Limburgse twist die blief hange.</span>
+              </span>
+              <span class="schedule-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="schedule-card__detail" id="artist-limbo-detail">
+              <div class="schedule-card__detail-inner schedule-card__detail-inner--artist">
+                <div class="artist-detail__copy">
+                  <p data-i18n="limboLong">In Limbo verbindt rauwe gitaren en eigentiedse indie mit de klank van 't Limburgs. Ein liveset mit energie, rafelrendsjes en ruimte veur verhaole. Deze artiestentekst is veurluipig.</p>
+                  <a class="spotify-link" href="https://open.spotify.com/search/In%20Limbo%20Limburg" target="_blank" rel="noopener"><span aria-hidden="true">▶</span><span data-i18n="spotifySearch">Zeuk op Spotify</span></a>
+                </div>
+                <figure class="artist-photo artist-photo--placeholder artist-photo--limbo" data-artist="In Limbo">
+                  <figcaption class="artist-photo__caption"><span data-i18n="artistPhotoLabel">Artiestenfoto</span><strong>In Limbo</strong><small data-i18n="photoFollows">Beeld volgt</small></figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-card schedule-card--artist reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="artist-riethamer-detail">
+              <span class="schedule-card__time">04</span>
+              <span class="schedule-card__summary">
+                <span class="schedule-card__type" data-i18n="artistLabel">Artiest</span>
+                <strong>Riethamer Rekords</strong>
+                <span data-i18n="riethamerShort">Oldschoolhiphop oet Limburg, direk en vol karakter.</span>
+              </span>
+              <span class="schedule-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="schedule-card__detail" id="artist-riethamer-detail">
+              <div class="schedule-card__detail-inner schedule-card__detail-inner--artist">
+                <div class="artist-detail__copy">
+                  <p data-i18n="riethamerLong">Riethamer Rekords bringk ein collectieve hiphopenergie nao 't podium. Limburgse flows, oldschool invleude en ein sound die de taol stevig in 't noe zet. Deze artiestentekst is veurluipig.</p>
+                  <a class="spotify-link" href="https://open.spotify.com/search/Riethamer%20Rekords" target="_blank" rel="noopener"><span aria-hidden="true">▶</span><span data-i18n="spotifySearch">Zeuk op Spotify</span></a>
+                </div>
+                <figure class="artist-photo artist-photo--placeholder artist-photo--riethamer" data-artist="Riethamer Rekords">
+                  <figcaption class="artist-photo__caption"><span data-i18n="artistPhotoLabel">Artiestenfoto</span><strong>Riethamer Rekords</strong><small data-i18n="photoFollows">Beeld volgt</small></figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+
+          <article class="schedule-card schedule-card--artist reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="artist-basement-detail">
+              <span class="schedule-card__time">05</span>
+              <span class="schedule-card__summary">
+                <span class="schedule-card__type" data-i18n="artistLabel">Artiest</span>
+                <strong>The Basement Collective</strong>
+                <span data-i18n="basementShort">Ein veertienkoppig collectief mit ein explosieve live-energie.</span>
+              </span>
+              <span class="schedule-card__plus" aria-hidden="true"></span>
+            </button>
+            <div class="schedule-card__detail" id="artist-basement-detail">
+              <div class="schedule-card__detail-inner schedule-card__detail-inner--artist">
+                <div class="artist-detail__copy">
+                  <p data-i18n="basementLong">The Basement Collective sleut de showcase aaf mit de energie van ein groot livecollectief. Ein volle bezetting, ein feestelijke podiumpresentatie en 't Limburgs veurop. Deze artiestentekst is veurluipig.</p>
+                  <a class="spotify-link" href="https://open.spotify.com/search/The%20Basement%20Collective" target="_blank" rel="noopener"><span aria-hidden="true">▶</span><span data-i18n="spotifySearch">Zeuk op Spotify</span></a>
+                </div>
+                <figure class="artist-photo artist-photo--placeholder artist-photo--basement" data-artist="The Basement Collective">
+                  <figcaption class="artist-photo__caption"><span data-i18n="artistPhotoLabel">Artiestenfoto</span><strong>The Basement Collective</strong><small data-i18n="photoFollows">Beeld volgt</small></figcaption>
+                </figure>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="host-note reveal" data-reveal><span data-i18n="presentedBy">De aovend weurt gepresenteerd door</span> <strong>Lotte Zeptner · Lotte oet Limburg</strong></p>
+      </section>
     </section>
 
-    <section class="panel panel--info" id="info">
+    <section class="panel info" id="info" aria-labelledby="info-title">
+      <div class="info__story reveal" data-reveal>
+        <p class="eyebrow" data-i18n="infoEyebrow">Waorum DIALEK?</p>
+        <h2 class="panel__title" id="info-title" data-split-words data-i18n="infoTitle" aria-label="Limburgs klink van noe">Limburgs klink van noe</h2>
+        <p class="info__lead" data-i18n="infoLead">DIALEK geuf ein nuuj generatie Limburgstalige makers ein professioneel podium. Ein festival woa muziek, taol, talentontwikkeling en ontmoeting samekómme — en woa 't Limburgs klinkt in pop, rock, hiphop, poëzie en spoken word van noe.</p>
+      </div>
+
       <div class="info__grid">
-        <div class="info__card reveal" data-reveal>
-          <h3 data-i18n="infoWhen">Wanneer</h3>
-          <p class="info__big" data-i18n="infoDate">6 meert 2026</p>
-          <p data-i18n="infoDoors">Inloup 19:30 oer<br/>Aanvang 20:00 oer</p>
-        </div>
-        <div class="info__card reveal" data-reveal>
-          <h3 data-i18n="infoWhere">Woa</h3>
-          <p class="info__big" data-i18n="infoVenueBig">De Azijnfabriek</p>
-          <p data-i18n="infoVenueSub">Remunj (Roermond)<br/>Limburg, NL</p>
-        </div>
-        <div class="info__card reveal" data-reveal>
-          <h3 data-i18n="infoEntry">Entree</h3>
-          <p class="info__big" data-i18n="infoPrice">Gratis</p>
-          <p data-i18n="infoPriceSub">Mit aanmelding<br/>vol = vol</p>
-        </div>
+        <article class="info-card reveal" data-reveal>
+          <span class="info-card__num">01</span>
+          <h3 data-i18n="dateHeading">Wanneer</h3>
+          <p class="info-card__big" data-i18n="dateValue">27 fibberwari 2027</p>
+          <p data-i18n="dateDetail">Daagprogramma vanaaf 12:00<br />Aovendshowcase vanaaf 19:30</p>
+        </article>
+        <article class="info-card reveal" data-reveal>
+          <span class="info-card__num">02</span>
+          <h3 data-i18n="locationHeading">Woa</h3>
+          <p class="info-card__big">ECI Cultuurfabriek</p>
+          <p><span data-i18n="heroTown">Remunj</span><br />Cultuurcafé + popzaal</p>
+        </article>
+        <article class="info-card reveal" data-reveal>
+          <span class="info-card__num">03</span>
+          <h3 data-i18n="ticketsHeading">Tickets</h3>
+          <p class="info-card__big">€ 5</p>
+          <p data-i18n="ticketsDetail">Exclusief administratiekoste<br />Verkoop via ECI Cultuurfabriek</p>
+        </article>
       </div>
-    </section>
 
-    <!-- ================= TICKETS / CTA ================= -->
-    <section class="panel panel--tickets" id="tickets">
-      <div class="tickets__inner reveal" data-reveal>
-        <h2 class="tickets__title" data-split-words data-i18n="ticketsTitle" aria-label="Link veur gratis tickets">Link veur gratis tickets</h2>
-        <p class="tickets__sub" data-i18n="ticketsSub">Unne bandoavend in 't plat — in de Azijnfabriek in Remunj. Vol = vol, dus wees d'r snel bie.</p>
-        <a class="btn" href="#" onclick="return false;" data-i18n="ticketsBtn">Reserveer dien plek</a>
-        <p class="tickets__note">@dialekevenement</p>
+      <div class="mission-strip reveal" data-reveal>
+        <p><strong>250</strong><span data-i18n="visitors">bezeukers</span></p>
+        <p><strong>1</strong><span data-i18n="festivalDay">festivaldaag</span></p>
+        <p><strong>10</strong><span data-i18n="dialects">dialekke op de website</span></p>
+      </div>
+
+      <div class="partners reveal" data-reveal>
+        <p class="eyebrow" data-i18n="partnersHeading">Same mit</p>
+        <div class="partners__list" aria-label="Partners en betrokkenen">
+          <span>ECI Cultuurfabriek</span>
+          <span>Stichting Tekstverslaafd</span>
+          <span>Lotte oet Limburg</span>
+          <span class="partners__potential">Limburgs Museum · in gesprek</span>
+          <span class="partners__potential">L1 · potentiële partner</span>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <span class="footer__brand">DIALEK<span>.</span></span>
-    <span class="footer__tag" data-i18n="footerTag">det klink good</span>
-    <span class="footer__meta" data-i18n="footerMeta">© 2026 · De Azijnfabriek, Remunj</span>
+    <span class="footer__tag" data-i18n="subtitle">det klink good</span>
+    <span class="footer__meta">© 2027 · ECI Cultuurfabriek, <span data-i18n="heroTown">Remunj</span></span>
+    <span class="footer__translation" data-i18n="translationFooter">De dialekvertalinge zeen veurluipig en waere nog gecontroleerd mit dialeksprekers.</span>
   </footer>
 
-  <script src="i18n.js"></script>
-  <script src="script.js"></script>
+  <script src="i18n.js?v=2027-2"></script>
+  <script src="script.js?v=2027-1"></script>
 </body>
 </html>
