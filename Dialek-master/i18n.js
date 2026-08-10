@@ -65,6 +65,8 @@
     basementShort: "Ein veertienkoppig collectief mit ein explosieve live-energie.",
     basementLong: "The Basement Collective sleut de showcase aaf mit de energie van ein groot livecollectief. Ein volle bezetting, ein feestelijke podiumpresentatie en 't Limburgs veurop. Deze artiestentekst is veurluipig.",
     spotifySearch: "Zeuk op Spotify",
+    artistPhotoLabel: "Artiestenfoto",
+    photoFollows: "Beeld volgt",
 
     infoEyebrow: "Waorum DIALEK?",
     infoTitle: "Limburgs klink van noe",
