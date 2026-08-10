@@ -81,7 +81,7 @@ a { color: inherit; text-decoration: none; }
   left: -10%;
   width: 120%;
   height: 60vh;
-  background-image: url("assets/cloud.png");
+  background-image: url("assets/cloud.webp");
   background-repeat: repeat-x;
   will-change: translate;
 }
@@ -326,7 +326,7 @@ a { color: inherit; text-decoration: none; }
    the tie point at the top stays put and only the bottom end grows down.
 
    The twine itself is drawn with gradients rather than cropped out of
-   vlaai.png: the photo only has ~35px of clean cord before it flares into
+   vlaai.webp: the photo only has ~35px of clean cord before it flares into
    the knot, and where it crosses the crust it's the same warm tan as the
    pastry — there's no strip in there to tile. Palette and twist pitch are
    sampled from that stub instead (shadow #6b5433 · mid #b19669 · lit #dcbb8e).

@@ -1,15 +1,15 @@
-# DIALEK. — *det klink good*
+# DIALEK. — _det klink good_
 
 A one-page parallax website for the Limburgs-dialect event **DIALEK.**, built
-from the original Instagram poster (*Unne bandoavend in 't plat — 6 meert 2026,
-De Azijnfabriek, Remunj*).
+from the original Instagram poster (_Unne bandoavend in 't plat — 6 meert 2026,
+De Azijnfabriek, Remunj_).
 
 ## Features
 
 - **Parallax everywhere** — a fixed vintage sky (gradient + film grain) with
   three cloud layers that drift at different depths on scroll, plus
   pointer-driven drift and per-section parallax.
-- **Bungelende vlaai** — the slice of *vlaai* hangs from a string and swings
+- **Bungelende vlaai** — the slice of _vlaai_ hangs from a string and swings
   like a pendulum (`bungel` + `vlaai-sway` keyframes), pivoting from where the
   string is tied.
 - **Staggered text** — the title splits into characters and the subtitles into
@@ -21,9 +21,9 @@ De Azijnfabriek, Remunj*).
 
 The imagery is cut directly from the poster photo (no drawn vlaai):
 
-- `assets/vlaai.png` — the pie slice, background removed via
+- `assets/vlaai.webp` — the pie slice, background removed via
   connected-component color keying.
-- `assets/cloud.png` — a soft cloud puff, blue keyed to transparent and
+- `assets/cloud.webp` — a soft cloud puff, blue keyed to transparent and
   feathered for seamless parallax tiling.
 
 ## Run
