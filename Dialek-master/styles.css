@@ -388,15 +388,48 @@ a { color: inherit; text-decoration: none; }
   animation: bungel 7.4s ease-in-out 1.35s infinite;
 }
 
+/* The cord is drawn from gradients rather than tiled from a plate. The
+   29x500 rope-extension.png repeated roughly twice inside the string and
+   its two ends don't meet — 3px of lateral jump and a dark band — so it
+   left a visible kink about halfway down (51% at desktop, clear of the
+   mask fade). Gradients have no loop point, so there is nothing to seam.
+
+   Every number below is measured off the cord in vlaai-clean.webp, so the
+   drawn rope and the photographed one meet without a step:
+     left  50.45%  cord centroid, ~4.7px right of the 1023px plate centre
+     width  1.09%  cord is ~11px wide where it leaves the top of the plate
+     63deg         twist rake, down-right (the old -68deg leaned the wrong
+                   way — the real cord climbs to the right, not the left)
+     1.34px        band spacing, i.e. the cord's 3px vertical period here
+     11px          ply beat, deliberately incommensurate with the twist so
+                   the two never line back up into a repeating pattern
+   The body stops are the cord's own cross-section, taken from full-alpha
+   columns only: dark rim at the left, highlight at 76%, right-hand rim
+   falling away. It is lit from the right, not down the middle.
+
+   --string-overlap tucks the cord into the slice as a % of the plate, so
+   it holds at every breakpoint instead of drifting the way a fixed px
+   value does; z-index keeps it behind the vlaai, hiding the bottom cut. */
 .string {
+  --string-overlap: 16%;
   position: absolute;
   z-index: -1;
-  left: 50%;
-  bottom: calc(100% - 12px);
-  width: clamp(4.5px, 1.8%, 5.5px);
-  height: clamp(135px, 18vh, 175px);
+  left: 50.45%;
+  bottom: calc(100% - var(--string-overlap));
+  width: clamp(2px, 1.09%, 3.4px);
+  height: calc(clamp(135px, 18vh, 175px) + var(--string-overlap));
   transform: translateX(-50%);
-  background: url("assets/vlaai-rope-extension.png") center bottom / 100% auto repeat-y;
+  background-image:
+    repeating-linear-gradient(63deg,
+      rgba(58, 42, 22, .46)    0     .38px,  rgba(58, 42, 22, 0)    .38px  .78px,
+      rgba(255, 248, 228, .46) .78px 1.08px, rgba(255, 248, 228, 0) 1.08px 1.34px),
+    repeating-linear-gradient(180deg,
+      rgba(52, 38, 20, .18)    0     1.6px, rgba(52, 38, 20, 0)    1.6px 5.4px,
+      rgba(255, 246, 224, .16) 5.4px 7.2px, rgba(255, 246, 224, 0) 7.2px 11px),
+    linear-gradient(90deg,
+      #82593d 0%, #986641 12%, #a57b51 21%, #bc9468 30%, #c9a378 39%,
+      #cdae7f 48%, #ceb380 57%, #d5b685 66%, #e3c198 76%, #dfc498 85%,
+      #b7915a 94%, #8f6d43 100%);
   filter: drop-shadow(1px 0 1px rgba(42, 34, 25, .22));
   mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .18) 28%, #000 45%);
 }
