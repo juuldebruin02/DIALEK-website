@@ -40,7 +40,7 @@
     showBlockTwo: "Showblok 02",
     pause: "Pauze",
     presentedBy: "De avond wordt gepresenteerd door",
-    activityBreaks: "Deze activiteiten pauzeren tijdens beide Tekstverslaafd-blokken.",
+    activityBreaks: "Taalactiviteiten en netwerken pauzeren tijdens beide Tekstverslaafd-blokken.",
 
     textStageTitle: "Tekstverslaafd-podium",
     textStageShort: "Limburgstalige poëzie, spoken word, liedjes en verhalen.",
