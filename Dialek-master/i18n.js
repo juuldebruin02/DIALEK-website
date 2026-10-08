@@ -266,5 +266,6 @@
     }
   ];
 
-  window.DIALEK_I18N = { dialects: DIALECTS, defaultCode: "remunjs" };
+  DIALECTS.unshift({ code: "nl", name: "Nederlands", town: "", strings: window.DIALEK_COPY_NL });
+  window.DIALEK_I18N = { dialects: DIALECTS, defaultCode: "nl" };
 })();

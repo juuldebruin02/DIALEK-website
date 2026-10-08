@@ -59,6 +59,7 @@
     if (!dialect) return;
 
     document.documentElement.dataset.dialect = dialect.code;
+    document.documentElement.lang = dialect.code === "nl" ? "nl" : "li";
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var value = dialect.strings[el.getAttribute("data-i18n")];
       if (value == null) return;
@@ -68,16 +69,35 @@
         el.textContent = value;
         splitOne(el);
         if (animate || reduceMotion) revealEl(el);
+      } else if (el.hasAttribute("data-i18n-paragraphs")) {
+        el.replaceChildren();
+        value.split(/\n\n+/).forEach(function (text) {
+          var paragraph = document.createElement("p");
+          paragraph.textContent = text;
+          el.appendChild(paragraph);
+        });
       } else if (value.indexOf("\n") >= 0) {
         el.innerHTML = value.split("\n").map(escapeHtml).join("<br>");
       } else {
         el.textContent = value;
       }
     });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      var value = dialect.strings[el.getAttribute("data-i18n-aria")];
+      if (value) el.setAttribute("aria-label", value);
+    });
+    // Metadata blijft de Nederlandse, redactioneel vastgelegde bron.
+    var source = window.DIALEK_COPY_NL;
+    if (source) {
+      document.title = source.pageTitle;
+      document.querySelector('meta[name="description"]').content = source.description;
+      document.querySelector('meta[property="og:title"]').content = source.ogTitle;
+      document.querySelector('meta[property="og:description"]').content = source.ogDescription;
+    }
   }
 
   var stored = null;
-  try { stored = localStorage.getItem("dialek-dialect"); } catch (error) {}
+  try { stored = localStorage.getItem("dialek-beta2-language"); } catch (error) {}
   var current = byCode[stored] ? stored : I18N.defaultCode;
   var select = document.getElementById("dialectSelect");
 
@@ -85,13 +105,13 @@
     I18N.dialects.forEach(function (dialect) {
       var option = document.createElement("option");
       option.value = dialect.code;
-      option.textContent = dialect.name + " · " + dialect.town;
+      option.textContent = dialect.name + (dialect.town ? " · " + dialect.town : "");
       select.appendChild(option);
     });
     select.value = current;
     select.addEventListener("change", function () {
       current = select.value;
-      try { localStorage.setItem("dialek-dialect", current); } catch (error) {}
+      try { localStorage.setItem("dialek-beta2-language", current); } catch (error) {}
       applyDialect(current, !reduceMotion);
     });
   }
