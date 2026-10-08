@@ -10,8 +10,8 @@ const errors = [], findings = [];
 const slots = {
   'day-text-detail': ['13:45–14:30','15:45–16:30'],
   'day-match-detail': ['14:30–15:45'],
-  'day-language-detail': ['13:00–13:45','14:30–15:45','16:30–18:00'],
-  'day-network-detail': ['13:00–13:45','14:30–15:45','16:30–18:00'],
+  'day-language-detail': ['13:00–18:00'],
+  'day-network-detail': ['13:00–18:00'],
   'artist-sophie-detail': ['20:00–20:25'], 'artist-tba-detail':['20:35–21:00'],
   'artist-limbo-detail':['21:15–21:40'], 'artist-riethamer-detail':['21:45–22:10'],
   'artist-basement-detail':['22:20–22:45']
@@ -27,6 +27,12 @@ const slots = {
   assert.equal(await page.locator('#dialectSelect option').count(),11);
   assert.equal(await page.locator('#info .info-card, #info .mission-strip, #info .partners').count(),0);
   assert.equal(await page.locator('[data-i18n="nightNote"], [data-i18n="dayProgramLabel"], .schedule-card__plus').count(),0);
+  assert.equal(await page.locator('.program-block--day .detail-status').count(),0);
+  const rightRows = await page.locator('.hero__facts--where p').evaluateAll(rows => rows.map(el => { const r=el.getBoundingClientRect(); return {top:r.top,bottom:r.bottom,right:r.right}; }));
+  assert.equal(rightRows.length,4);
+  assert.equal(new Set(rightRows.map(r => Math.round(r.right))).size,1);
+  const rightGaps = rightRows.slice(1).map((r,i) => r.top-rightRows[i].bottom);
+  assert.ok(Math.max(...rightGaps)-Math.min(...rightGaps)<1,'Uneven hero fact spacing');
   assert.equal(await page.locator('a[data-i18n="matchCta"]').getAttribute('href'),'https://forms.gle/nLZkYrnmeo9nLyRF6');
   assert.equal(await page.locator('a[href="mailto:juuldebruinmusic@gmail.com"]').count(),1);
   assert.equal(await page.locator('.partner').count(),3);
@@ -57,6 +63,9 @@ const slots = {
       const issue=await page.evaluate(()=>{
         const bad=[];
         if(document.documentElement.scrollWidth>innerWidth+1)bad.push('page overflow: '+document.documentElement.scrollWidth);
+        const program=document.querySelector('#programma').getBoundingClientRect();
+        const about=document.querySelector('#info').getBoundingClientRect();
+        if(Math.abs(program.width-about.width)>1||Math.abs(program.left-about.left)>1)bad.push('program/about panel widths differ');
         for(const el of document.querySelectorAll('.nav__links > *, .schedule-card__trigger, .hero__facts')){
           const r=el.getBoundingClientRect();
           if(r.left<0||r.right>innerWidth+1)bad.push(el.className+' outside viewport '+r.left+' / '+r.right);

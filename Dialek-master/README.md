@@ -47,7 +47,7 @@ Beta 1 is onafhankelijk van beta 2 terug te halen via de tag. Om beta 1 te bekij
 
 1. Eerst de Nederlandse copy geplaatst, als afzonderlijk controlepunt in de geschiedenis.
 2. Expliciete feedback gaat vóór oudere tekst: ticketprijs €6, daginloop 13:00, avondinloop 19:30. De laatste act speelt 22:20–22:45.
-3. Tekstverslaafd: 13:45–14:30 en 15:45–16:30. Taalmatch: 14:30–15:45. Taalactiviteiten en netwerken: 13:00–13:45, 14:30–15:45 en 16:30–18:00.
+3. Tekstverslaafd: 13:45–14:30 en 15:45–16:30. Taalmatch: 14:30–15:45. Taalactiviteiten en netwerken tonen op verzoek alleen de begin- en eindtijd: 13:00–18:00. De toelichting over pauzes tijdens Tekstverslaafd blijft staan. De voorlopige statuslabels bij alle vier de dagonderdelen zijn verwijderd; de Taalmatch-aanmeldknop blijft beschikbaar.
 4. Tekst uit het Word-document is op de bijbehorende sleutels gezet. Alleen duidelijke schrijf-/spatiefouten zijn licht gecorrigeerd; de losse opmerkingen in het document zijn geen aanvullende wijzigingsopdrachten. Lottes nieuwe biografie staat onder de bestaande presentatorvermelding, uitklapbaar en zonder fictief tijdslot.
 5. Foto's zijn afgeleid van de vier aangeleverde persfoto's. De oorspronkelijke bestanden in `Pressfoto's` zijn niet gewijzigd. De webversies zijn niet kunstmatig verscherpt of opgeschaald.
 6. Partners: Tekstverslaafd, Lotte Zeptner en Ons Limburgs Museum. Lotte krijgt op expliciet verzoek geen logo. Bronvermelding van de andere logo's staat bij de assets.
