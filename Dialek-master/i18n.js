@@ -10,11 +10,11 @@
     ["zitterds", "Zitterds", "Sittard"],
     ["venloos", "Venloos", "Venlo"],
     ["kirchroodsj", "Kirchröadsj", "Kerkrade"],
-    ["heeles", "Heëls", "Heerlen"],
+    ["heeles", "Heëlesj", "Heerlen"],
     ["wieerts", "Wieërts", "Weert"],
-    ["echts", "Echts", "Echt"],
+    ["echts", "Echs", "Echt"],
     ["valkebergs", "Valkebergs", "Valkenburg"],
-    ["venroads", "Venroads", "Venray"]
+    ["venroads", "Venrods", "Venray"]
   ];
   var dialects = [{ code: "nl", name: "Nederlands", town: "", strings: dutch }];
   places.forEach(function (place) {
@@ -25,5 +25,5 @@
       strings: Object.assign({}, dutch, regional.common, regional.variants[place[0]])
     });
   });
-  window.DIALEK_I18N = { dialects: dialects, defaultCode: "nl" };
+  window.DIALEK_I18N = { dialects: dialects, defaultCode: "remunjs" };
 })();

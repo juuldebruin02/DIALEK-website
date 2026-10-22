@@ -2,7 +2,7 @@
   "use strict";
 
   // Redactionele bron: DIALEK Copywriting Nederlands.docx.
-  // Tijden uit Draaiboek 0.1 en de expliciete feedback (€6) gaan voor.
+  // Tijden: Programmaoverzicht DIALEK 2027.pdf (ontvangen 16 oktober 2026).
   // Vaste sleutels maken latere tekstcorrecties en dialectreview herleidbaar.
   window.DIALEK_COPY_NL = {
     navProgram: "Programma",
@@ -25,7 +25,7 @@
     programEyebrow: "27 februari 2027 · ECI Cultuurfabriek",
     programTitle: "Het volledige programma",
     programIntro: "Een festival vol taal, cultuur en muziek, maar dan in het Limburgs! Ontdek de volledige festivaldag, van het interactieve dagprogramma tot de showcase-avond vol nieuw Limburgs talent.",
-    dayKicker: "Cultuurcafé · 13:00–18:00",
+    dayKicker: "Cultuurcafé · 14:30–18:30",
     dayTitle: "Dagprogramma",
     dayNote: "De definitieve tijdsloten volgen later.",
     nightKicker: "Popzaal · inloop 19:30 · start 20:00",
@@ -40,7 +40,7 @@
     showBlockTwo: "Showblok 02",
     pause: "Pauze",
     presentedBy: "De avond wordt gepresenteerd door",
-    activityBreaks: "Taalactiviteiten en netwerken pauzeren tijdens beide Tekstverslaafd-blokken.",
+    activityBreaks: "Taalactiviteiten en netwerken pauzeren tijdens het tweede Tekstverslaafd-blok (16:45–17:30).",
 
     textStageTitle: "Tekstverslaafd-podium",
     textStageShort: "Limburgstalige poëzie, spoken word, liedjes en verhalen.",
@@ -73,11 +73,11 @@
     photoFollows: "Beeld volgt",
 
     infoEyebrow: "Over DIALEK",
-    infoTitle: "Het Limburgs van nu",
-    infoLead: "DIALEK laat een nieuwe generatie Limburgstalige makers zien. Het is een plek die mensen samenbrengt, inspireert en kennis laat maken met Limburgs op nieuwe manieren. Een festival waar het Limburgs klinkt in pop, rock, hiphop, poëzie en spoken word.\n\nUiteindelijk hopen we mensen te inspireren om de Limburgse taal vaker te spreken, schrijven, beluisteren of delen.\n\nDIALEK wil laten horen hoe mooi het kan zijn om muziek te maken en te ervaren in de taal waarin je bent opgegroeid. Want hoewel steeds minder jongeren dagelijks het dialect spreken, groeit de trots op de Limburgse taal juist. Door jong talent een podium te geven die bewust kiest voor het Limburgs in hun originele, eigentijdse songs laat het zien dat het dialect niet alleen thuishoort in traditie, maar ook past binnen een moderne pop- en rocksound.",
+    infoTitle: "muziek die klinkt als nu, maar voelt als thuis.",
+    infoLead: "DIALEK wil laten horen hoe mooi het kan zijn om muziek te maken en te ervaren in de taal waarin je bent opgegroeid. Want hoewel steeds minder jongeren dagelijks het dialect spreken, groeit de trots op de Limburgse taal juist. Door jong talent een podium te geven die bewust kiest voor het Limburgs in hun originele, eigentijdse songs laat het zien dat het dialect niet alleen thuis hoort bij carnaval of traditie, maar ook past binnen een pop-, rock- en hiphopsound van nu.",
     dateHeading: "Wanneer",
     dateValue: "27 februari 2027",
-    dateDetail: "Dagprogramma vanaf 13:00\nAvondshowcase vanaf 19:30",
+    dateDetail: "Dagprogramma vanaf 14:30\nAvondshowcase vanaf 19:30",
     locationHeading: "Waar",
     ticketsHeading: "Tickets",
     ticketsDetail: "Exclusief administratiekosten\nVerkoop via ECI Cultuurfabriek",
@@ -85,7 +85,7 @@
     festivalDay: "festivaldag",
     dialects: "dialecten op de website",
     partnersHeading: "Samen met",
-    partnersMore: "Meer partners worden binnenkort bekendgemaakt.",
+    partnersMore: "en andere partners.",
     contactLabel: "Contact",
     translationFooter: "De dialectvertalingen zijn voorlopig en worden nog gecontroleerd door dialectsprekers.",
     pageTitle: "DIALEK. Een festival in ‘t plat.",

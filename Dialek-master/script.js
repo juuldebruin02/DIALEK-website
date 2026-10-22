@@ -97,7 +97,7 @@
   }
 
   var stored = null;
-  try { stored = localStorage.getItem("dialek-beta2-language"); } catch (error) {}
+  try { stored = localStorage.getItem("dialek-beta3-language"); } catch (error) {}
   var current = byCode[stored] ? stored : I18N.defaultCode;
   var select = document.getElementById("dialectSelect");
 
@@ -111,7 +111,7 @@
     select.value = current;
     select.addEventListener("change", function () {
       current = select.value;
-      try { localStorage.setItem("dialek-beta2-language", current); } catch (error) {}
+      try { localStorage.setItem("dialek-beta3-language", current); } catch (error) {}
       applyDialect(current, !reduceMotion);
     });
   }
