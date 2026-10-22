@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Black&amp;family=League+Spartan:wght@600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=beta3-1" />
+  <link rel="stylesheet" href="styles.css?v=beta4-1" />
 </head>
 <body>
   <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
@@ -187,7 +187,10 @@
         <p class="activity-note" data-i18n="activityBreaks">Taalactiviteiten en netwerken pauzeren tijdens het tweede Tekstverslaafd-blok (16:45–17:30).</p>
       </section>
 
-      <div class="program-divider" aria-hidden="true"><span></span><i></i><span></span></div>
+      <div class="program-divider">
+        <p class="program-divider__note" data-i18n="foodNote">Frietkraam op het terrein, dus blijf vooral hangen!</p>
+        <span aria-hidden="true"></span><i aria-hidden="true"></i><span aria-hidden="true"></span>
+      </div>
 
       <section class="program-block program-block--night" aria-labelledby="night-title">
         <header class="program-block__head reveal" data-reveal>
@@ -203,45 +206,46 @@
 
         <div class="schedule-list schedule-list--artists" data-accordion-group>
           <article class="schedule-card schedule-card--artist reveal" data-reveal data-accordion>
-            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="artist-sophie-detail">
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="artist-troubadours-detail">
               <span class="schedule-card__time"><span class="schedule-card__slot"><time datetime="20:00">20:00</time><span>–</span><time datetime="20:30">20:30</time></span></span>
               <span class="schedule-card__summary">
-                <strong>Sophie Albert</strong>
-                <span data-i18n="sophieShort">Intieme nummers, die je laten verlangen naar het zuiden.</span>
+                <strong>Opgeschaoren Troubadours</strong>
+                <span data-i18n="troubadoursShort">Van blues tot hiphop, met raps in het dialect van de Westelijke Mijnstreek.</span>
               </span>
               <span class="schedule-card__chevron" aria-hidden="true"></span>
             </button>
-            <div class="schedule-card__detail" id="artist-sophie-detail">
+            <div class="schedule-card__detail" id="artist-troubadours-detail">
               <div class="schedule-card__detail-inner schedule-card__detail-inner--artist">
                 <div class="artist-detail__copy">
-                  <p data-i18n="sophieLong">Sophie Albert geeft Limburgse muziek een compleet nieuwe stem. Na een songwritingopleiding in Londen, keerde deze artieste terug naar Limburg om haar moedertaal een plek te geven in haar muziek. Met pakkende teksten en speelse melodieën laat ze zien dat het Limburgs de perfecte manier is om je gevoelens uit te drukken. Geïnspireerd door artiesten als Olivia Dean, vertelt ze over liefde, taal en verlangen naar thuis. Laat je raken door haar unieke en persoonlijke nummers, zodat je net als Sophie gaat verlangen naar het zuiden.</p>
-                  <a class="spotify-link" href="https://open.spotify.com/artist/5tUI0u5Nlhk6VZNmEboPou" target="_blank" rel="noopener"><span aria-hidden="true">▶</span><span data-i18n="spotifySearch">Luister op Spotify</span></a>
+                  <div data-i18n="troubadoursLong" data-i18n-paragraphs><p>Heb je ooit blues met reggaeton horen blenden? Of tango met old school hiphop? Opgeschaoren Troubadours is een verrassende Limburgstalige formatie die zich niet in een hokje laat plaatsen. De rode draad? Dat zijn de raps in het dialect uit de Westelijke Mijnstreek. Van vlijmscherpe maatschappijkritische tirades tot zachte poëtische lovesongs. Laat je meenemen in de rijke en gevarieerde belevingswereld van deze gewone muzikanten met een buitengewone passie.</p><p>Opgeschaoren Troubadours lanceerde in 2020 de single 'Meaters’, die in 2022 werd opgevolgd door de debuut-EP 'Van Laer'. In 2024 zette de band in samenwerking met Provincie Limburg en maatschappelijke organisaties de campagne 'ICH DRUIM DOOR' in, waarmee op basis van het gelijknamige album jongeren werden aangespoord om met de Limburgse streektaal aan de slag te gaan. In datzelfde jaar behaalde het collectief de tweede plaats met de single ‘Jóngesdruim' op de Limburgse editie van het Regio Songfestival.</p></div>
+                  <a class="spotify-link" href="https://open.spotify.com/artist/1UJkA0mBxwmjxO6FV2QhUT" target="_blank" rel="noopener"><span aria-hidden="true">▶</span><span data-i18n="spotifySearch">Luister op Spotify</span></a>
                 </div>
-                <figure class="artist-photo artist-photo--real artist-photo--sophie" data-artist="Sophie Albert">
-                  <img class="artist-photo__image" src="assets/artists/sophie-albert.webp" alt="Sophie Albert" width="1600" height="1060" loading="lazy" decoding="async" />
-                  <figcaption class="artist-photo__caption"><strong>Sophie Albert</strong></figcaption>
+                <figure class="artist-photo artist-photo--real artist-photo--troubadours" data-artist="Opgeschaoren Troubadours">
+                  <img class="artist-photo__image" src="assets/artists/opgeschaoren-troubadours.webp" alt="Opgeschaoren Troubadours" width="1800" height="1200" loading="lazy" decoding="async" />
+                  <figcaption class="artist-photo__caption"><strong>Opgeschaoren Troubadours</strong></figcaption>
                 </figure>
               </div>
             </div>
           </article>
 
-          <article class="schedule-card schedule-card--artist schedule-card--tba reveal" data-reveal data-accordion>
-            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="artist-tba-detail">
+          <article class="schedule-card schedule-card--artist reveal" data-reveal data-accordion>
+            <button class="schedule-card__trigger" type="button" aria-expanded="false" aria-controls="artist-melton-detail">
               <span class="schedule-card__time"><span class="schedule-card__slot"><time datetime="20:40">20:40</time><span>–</span><time datetime="21:05">21:05</time></span></span>
               <span class="schedule-card__summary">
-                <strong>TBA</strong>
-                <span data-i18n="tbaShort">De laatste Limburgstalige act wordt binnenkort bekendgemaakt.</span>
+                <strong>Melton</strong>
+                <span data-i18n="meltonShort">Alternatieve pop, folk en softrock over Heart, Home en Mind.</span>
               </span>
               <span class="schedule-card__chevron" aria-hidden="true"></span>
             </button>
-            <div class="schedule-card__detail" id="artist-tba-detail">
+            <div class="schedule-card__detail" id="artist-melton-detail">
               <div class="schedule-card__detail-inner schedule-card__detail-inner--artist">
                 <div class="artist-detail__copy">
-                  <p data-i18n="tbaLong">Hou de socials van DIALEK in de gaten voor de bekendmaking!</p>
-                  <span class="detail-status detail-status--pending" data-i18n="toBeAnnounced">Wordt bekendgemaakt</span>
+                  <p data-i18n="meltonLong">Melton is een band van Limburgse bodem, ontstaan vanuit het muziekproject van singer-songwriter Josh Mosa. Met een sound waarin alternatieve pop, folk en softrock samenkomen, vertaalt de band verhalen rondom de thema’s Heart, Home en Mind naar zowel Engelstalige als Limburgstalige muziek. Van rauwe energie tot intieme, kwetsbare momenten: reflectie staat aan het roer, terwijl de muziek het verhaal vertelt en gevoel de ruimte krijgt.</p>
+                  <span class="detail-status detail-status--pending" data-i18n="spotifyPending">Spotify-link volgt</span>
                 </div>
-                <figure class="artist-photo artist-photo--placeholder artist-photo--tba" data-artist="TBA">
-                  <figcaption class="artist-photo__caption"><strong>TBA</strong><small data-i18n="photoFollows">Beeld volgt</small></figcaption>
+                <figure class="artist-photo artist-photo--real artist-photo--melton" data-artist="Melton">
+                  <img class="artist-photo__image" src="assets/artists/melton.webp" alt="Melton" width="1800" height="1200" loading="lazy" decoding="async" />
+                  <figcaption class="artist-photo__caption"><strong>Melton</strong></figcaption>
                 </figure>
               </div>
             </div>
@@ -393,9 +397,9 @@
     <span class="footer__translation" data-i18n="translationFooter">De dialectvertalingen zijn voorlopig en worden nog gecontroleerd door dialectsprekers.</span>
   </footer>
 
-  <script src="copy-nl.js?v=beta3-1"></script>
-  <script src="copy-li.js?v=beta3-1"></script>
-  <script src="i18n.js?v=beta3-1"></script>
-  <script src="script.js?v=beta3-1"></script>
+  <script src="copy-nl.js?v=beta4-1"></script>
+  <script src="copy-li.js?v=beta4-1"></script>
+  <script src="i18n.js?v=beta4-1"></script>
+  <script src="script.js?v=beta4-1"></script>
 </body>
 </html>

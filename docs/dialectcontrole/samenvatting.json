@@ -1,0 +1,68 @@
+{
+  "checkedAt": "2026-10-22T12:33:22.239Z",
+  "copySha256": "65b8f22ba7c3c5e186c15c5bbca3ffaa7030214d0324abd4e6a1e89f8f397c8e",
+  "uniqueQueries": 713,
+  "scope": "Visible translated copy and accessibility labels, unique words per dialect, repeated occurrences linked by copy key. Exact headword matching is not grammatical verification. Proper names and loanwords are included; numbers are excluded.",
+  "dialects": {
+    "remunjs": {
+      "words": 506,
+      "exact": 193,
+      "remaining": 313,
+      "dictionary": true
+    },
+    "mestreechs": {
+      "words": 503,
+      "exact": 216,
+      "remaining": 287,
+      "dictionary": true
+    },
+    "zitterds": {
+      "words": 502,
+      "exact": 163,
+      "remaining": 339,
+      "dictionary": true
+    },
+    "venloos": {
+      "words": 508,
+      "exact": 131,
+      "remaining": 377,
+      "dictionary": true
+    },
+    "kirchroodsj": {
+      "words": 507,
+      "exact": 0,
+      "remaining": 507,
+      "dictionary": false
+    },
+    "heeles": {
+      "words": 511,
+      "exact": 0,
+      "remaining": 511,
+      "dictionary": false
+    },
+    "wieerts": {
+      "words": 507,
+      "exact": 0,
+      "remaining": 507,
+      "dictionary": false
+    },
+    "echts": {
+      "words": 505,
+      "exact": 0,
+      "remaining": 505,
+      "dictionary": false
+    },
+    "valkebergs": {
+      "words": 505,
+      "exact": 167,
+      "remaining": 338,
+      "dictionary": true
+    },
+    "venroads": {
+      "words": 506,
+      "exact": 0,
+      "remaining": 506,
+      "dictionary": false
+    }
+  }
+}

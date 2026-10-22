@@ -41,6 +41,7 @@
     pause: "Pauze",
     presentedBy: "De avond wordt gepresenteerd door",
     activityBreaks: "Taalactiviteiten en netwerken pauzeren tijdens het tweede Tekstverslaafd-blok (16:45–17:30).",
+    foodNote: "Frietkraam op het terrein, dus blijf vooral hangen!",
 
     textStageTitle: "Tekstverslaafd-podium",
     textStageShort: "Limburgstalige poëzie, spoken word, liedjes en verhalen.",
@@ -55,10 +56,11 @@
     networkShort: "Een ontmoetingsplek voor iedereen in de Limburgse cultuur- en taalwereld.",
     networkLong: "In het Cultuurcafé krijgen makers, programmeurs en andere professionals uit de Limburgstalige cultuursector de kans om elkaar te ontmoeten, kennis te delen en eventueel zelfs nieuwe samenwerkingen aan te gaan. Iedereen is welkom om aan te sluiten!",
 
-    sophieShort: "Intieme nummers, die je laten verlangen naar het zuiden.",
-    sophieLong: "Sophie Albert geeft Limburgse muziek een compleet nieuwe stem. Na een songwritingopleiding in Londen, keerde deze artieste terug naar Limburg om haar moedertaal een plek te geven in haar muziek. Met pakkende teksten en speelse melodieën laat ze zien dat het Limburgs de perfecte manier is om je gevoelens uit te drukken. Geïnspireerd door artiesten als Olivia Dean, vertelt ze over liefde, taal en verlangen naar thuis. Laat je raken door haar unieke en persoonlijke nummers, zodat je net als Sophie gaat verlangen naar het zuiden.",
-    tbaShort: "De laatste Limburgstalige act wordt binnenkort bekendgemaakt.",
-    tbaLong: "Hou de socials van DIALEK in de gaten voor de bekendmaking!",
+    troubadoursShort: "Van blues tot hiphop, met raps in het dialect van de Westelijke Mijnstreek.",
+    troubadoursLong: "Heb je ooit blues met reggaeton horen blenden? Of tango met old school hiphop? Opgeschaoren Troubadours is een verrassende Limburgstalige formatie die zich niet in een hokje laat plaatsen. De rode draad? Dat zijn de raps in het dialect uit de Westelijke Mijnstreek. Van vlijmscherpe maatschappijkritische tirades tot zachte poëtische lovesongs. Laat je meenemen in de rijke en gevarieerde belevingswereld van deze gewone muzikanten met een buitengewone passie.\n\nOpgeschaoren Troubadours lanceerde in 2020 de single 'Meaters’, die in 2022 werd opgevolgd door de debuut-EP 'Van Laer'. In 2024 zette de band in samenwerking met Provincie Limburg en maatschappelijke organisaties de campagne 'ICH DRUIM DOOR' in, waarmee op basis van het gelijknamige album jongeren werden aangespoord om met de Limburgse streektaal aan de slag te gaan. In datzelfde jaar behaalde het collectief de tweede plaats met de single ‘Jóngesdruim' op de Limburgse editie van het Regio Songfestival.",
+    meltonShort: "Alternatieve pop, folk en softrock over Heart, Home en Mind.",
+    meltonLong: "Melton is een band van Limburgse bodem, ontstaan vanuit het muziekproject van singer-songwriter Josh Mosa. Met een sound waarin alternatieve pop, folk en softrock samenkomen, vertaalt de band verhalen rondom de thema’s Heart, Home en Mind naar zowel Engelstalige als Limburgstalige muziek. Van rauwe energie tot intieme, kwetsbare momenten: reflectie staat aan het roer, terwijl de muziek het verhaal vertelt en gevoel de ruimte krijgt.",
+    spotifyPending: "Spotify-link volgt",
     toBeAnnounced: "Wordt bekendgemaakt",
     limboShort: "Rauwe Limburgse poprock die onverwacht dichtbij komt.",
     limboLong: "Een aantal jaar geleden begon In Limbo als Engelse coverband. Na een tijdje ontstond de wens om eigen werk te gaan maken, maar hun eigen geluid vinden bleek nog niet zo makkelijk als gedacht. Na diep graven en vooral veel plezier met elkaar hebben ze het dan toch te pakken: hun eerste EP in het Limburgs is een feit. Daarbij houden ze nog steeds van keiharde poprock, geïnspireerd door de Arctic Monkeys, Florence + The Machine en The Kooks, maar dan op hun eigen manier. Ze combineren scheurende gitaren met teksten die onverwacht dichtbij komen. In Limbo laat zien dat Limburg meer te bieden heeft dan alleen carnavalsmuziek en vlaai. Want een wijze vent zei ooit: “‘t is een kwestie van geduld!”",
