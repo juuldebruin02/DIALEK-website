@@ -27,7 +27,6 @@ Bij het aanleveren van definitieve vertalingen zijn per wijziging nodig:
 
 ## Nog te vervangen placeholders
 
-- directe ticketlink van de DIALEK-pagina bij ECI;
 - de bevestigde Spotify-link van Melton (niet verwarren met naamgenoten);
 - definitieve invulling van de interactieve taalactiviteiten;
 - gecontroleerde teksten voor alle dialectvarianten.
@@ -40,10 +39,17 @@ De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangelever
 - `website-beta-2`: controlepunt van de afgeronde eerste beta 2-versie.
 - `website-beta-2-final`: `217c51b`, de definitieve beta 2 vóór de wijzigingen van oktober.
 - `website-beta-3`: `7bf0064`, de website zoals die er vóór de feedback van 22 oktober 2026 uitzag.
-- `codex/website-beta-4`: de werkbranch voor de feedback van 22 oktober; de afgeronde versie krijgt de tag `website-beta-4` en wordt op verzoek met `main` samengevoegd.
+- `website-beta-4`: `f29f581`, de afgeronde artiesten-, partner- en dialectupdate van 22 oktober 2026; ook bewaard op `codex/website-beta-4`.
+- `website-beta-5`: versie van 24 oktober 2026 met uitsluitend de definitieve ticketbestemming als websitewijziging: `https://ecicultuurfabriek.nl/voorstelling/dialek/`. Beta 4 blijft het herstelpunt vóór deze aanpassing.
 - Uitpakbare lokale kopieën staan naast de projectmap in `../Versies/`. Deze grote ZIP-bestanden gaan niet mee naar GitHub. De versiegeschiedenis zelf blijft in Git bewaard.
 
 Beta 1 is onafhankelijk van beta 2 terug te halen via de tag. Om beta 1 te bekijken zonder de huidige bestanden te wijzigen, kan een apart archief of een aparte checkout van die tag gemaakt worden. Gebruik geen harde reset op de werkmap.
+
+## Beta 5: ticketlink en hostingmap
+
+De knop Tickets opent de aangeleverde DIALEK-pagina bij ECI in een nieuw tabblad. Teksten, vormgeving, taalvarianten, programma en overige links zijn ongewijzigd ten opzichte van beta 4.
+
+Voor hosting bevat `Dialek-master/` de volledige statische website, met `index.html` direct in die map. Er is geen bouwstap of installatie van afhankelijkheden nodig. Gebruik deze map als te publiceren map; documentatie, controlescripts en originele persfoto’s buiten deze map zijn geen onderdeel van de website. Hosting en domeininstellingen zijn met deze versie niet gewijzigd.
 
 ## Beta 4: afgebakende wijzigingen
 
