@@ -568,9 +568,14 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.62;
 }
 
+/* The ::before card bleeds --card-pad past the content box, so padding-block matches it on every side. */
 .program,
 .info {
-  width: min(1240px, calc(100vw - 32px));
+  --card-gap: 44px;
+  --card-pad: clamp(28px, 5vw, 72px);
+  --card-gutter: 16px;
+  width: min(1240px, 100% - 2 * (var(--card-gutter) + var(--card-pad)));
+  padding-block: calc(var(--card-gap) + var(--card-pad));
 }
 
 .program::before,
@@ -578,7 +583,7 @@ a { color: inherit; text-decoration: none; }
   content: "";
   position: absolute;
   z-index: -1;
-  inset: 44px -4vw;
+  inset: var(--card-gap) calc(var(--card-pad) * -1);
   background: linear-gradient(145deg, rgba(35, 78, 98, .46), rgba(243, 236, 220, .075));
   border: 1px solid rgba(243, 236, 220, .22);
   border-radius: clamp(26px, 4vw, 48px);
@@ -1050,13 +1055,11 @@ a { color: inherit; text-decoration: none; }
 .host-note p { max-width: 780px; line-height: 1.7; }
 .host-note__intro { color: var(--cream); font-weight: 600; }
 
-.info { padding-top: clamp(110px, 15vw, 180px); }
-
 .info::before {
   background: linear-gradient(145deg, rgba(34, 77, 97, .48), rgba(243, 236, 220, .085));
 }
 
-.info__story { max-width: 900px; margin-bottom: 60px; }
+.info__story { max-width: 900px; }
 
 /* Keep every line of the longer About heading flush with its eyebrow and body. */
 #info-title { display: flex; flex-wrap: wrap; column-gap: .18em; line-height: 1.02; }
@@ -1262,11 +1265,10 @@ a { color: inherit; text-decoration: none; }
   .hero__facts span { font-size: .94rem; }
   .scroll-hint { display: none; }
 
-  .panel { padding: 88px 0; }
   .program,
-  .info { width: min(100% - 20px, 1240px); }
+  .info { --card-gap: 24px; --card-pad: 24px; --card-gutter: 8px; }
   .program::before,
-  .info::before { inset: 24px -3px; border-radius: 25px; }
+  .info::before { border-radius: 25px; }
   .panel__head { margin-bottom: 54px; }
   .panel__title { font-size: clamp(2.85rem, 15vw, 4.8rem); }
 
