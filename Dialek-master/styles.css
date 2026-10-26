@@ -18,6 +18,7 @@
   --ease-out: cubic-bezier(.18, .78, .23, 1);
   --ease-soft: cubic-bezier(.45, .05, .55, .95);
   --page: min(1180px, calc(100vw - 40px));
+  --intro-size: clamp(1rem, 1.8vw, 1.24rem);
 }
 
 * { box-sizing: border-box; }
@@ -569,7 +570,7 @@ a { color: inherit; text-decoration: none; }
   max-width: 650px;
   margin: 24px 0 0;
   color: var(--cream-dim);
-  font-size: clamp(1rem, 1.8vw, 1.24rem);
+  font-size: var(--intro-size);
   line-height: 1.62;
 }
 
@@ -1069,8 +1070,8 @@ a { color: inherit; text-decoration: none; }
   max-width: 850px;
   margin: 30px 0 0;
   color: var(--cream-dim);
-  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
-  line-height: 1.72;
+  font-size: var(--intro-size);
+  line-height: 1.62;
 }
 
 .info__grid {
@@ -1311,7 +1312,6 @@ a { color: inherit; text-decoration: none; }
   .show-block-label,
   .pause-row { font-size: .62rem; }
   .host-note { font-size: .8rem; }
-  .info__lead { font-size: 1rem; }
   .partners { margin-top: 54px; }
 }
 
