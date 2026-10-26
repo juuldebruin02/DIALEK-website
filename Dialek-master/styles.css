@@ -377,15 +377,21 @@ a { color: inherit; text-decoration: none; }
 
 @keyframes vlaai-fall {
   0% { transform: translateY(-120vh); }
-  72% { transform: translateY(1.4vh); }
-  88% { transform: translateY(-.45vh); }
+  /* ease-in-out reverses the bounce without a speed jump. */
+  72% { transform: translateY(1.4vh); animation-timing-function: ease-in-out; }
+  88% { transform: translateY(-.45vh); animation-timing-function: ease-in-out; }
   100% { transform: translateY(0); }
 }
 
 .vlaai-swing {
+  /* Lands hanging still, eases out to the first extreme, then loops. */
+  --swing-start: 1.35s;
+  --swing-ease-in: 1.85s;
   position: relative;
   transform-origin: 50% -150px;
-  animation: bungel 7.4s ease-in-out 1.35s infinite;
+  animation:
+    bungel-in var(--swing-ease-in) ease-in-out var(--swing-start) forwards,
+    bungel 7.4s ease-in-out calc(var(--swing-start) + var(--swing-ease-in)) infinite;
 }
 
 /* The cord is drawn from gradients rather than tiled from a plate. The
@@ -439,6 +445,11 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: auto;
   filter: drop-shadow(0 25px 30px rgba(12, 26, 34, .38));
+}
+
+@keyframes bungel-in {
+  from { transform: rotate(0); }
+  to { transform: rotate(-2.8deg); }
 }
 
 @keyframes bungel {
@@ -1319,6 +1330,7 @@ a { color: inherit; text-decoration: none; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .js .vlaai-drop { transform: none !important; }
+  .vlaai-swing { animation: none !important; }
   .js .reveal,
   .js .char,
   .js .word { opacity: 1 !important; transform: none !important; }
