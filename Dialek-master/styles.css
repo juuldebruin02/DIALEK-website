@@ -648,7 +648,7 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(-3px);
   border-color: var(--gold-light);
   background: linear-gradient(135deg, rgba(46, 88, 106, .72), rgba(243, 236, 220, .09));
-  box-shadow: 0 18px 44px rgba(7, 24, 33, .26), inset 4px 0 0 var(--gold-light);
+  box-shadow: 0 18px 44px rgba(7, 24, 33, .26), inset 0 0 0 1px var(--gold-light);
 }
 
 .schedule-card__trigger {
@@ -907,7 +907,6 @@ a { color: inherit; text-decoration: none; }
   pointer-events: none;
   border: 2px solid var(--gold-light);
   border-radius: inherit;
-  box-shadow: inset 4px 0 0 var(--gold-light);
 }
 
 .schedule-card__detail-inner--artist {
