@@ -14,9 +14,9 @@ Open daarna `http://localhost:4173`.
 
 ## Inhoud en vertalingen
 
-Remunjs is de standaardtaal bij een eerste bezoek. Nederlands blijft beschikbaar bovenaan het menu en is de inhoudelijke bron. De Nederlandse bronteksten staan met vaste sleutels in `copy-nl.js`; `copy-li.js` bevat de Limburgse werkvertalingen en de streekgebonden aanvullingen. `i18n.js` koppelt deze aan de elf taalkeuzes. De dialectteksten zijn nog niet goedgekeurd door lokale dialectsprekers. De website vermeldt die status bij de taalkeuze en in de footer. Bronnen, resterende twijfelpunten en een export voor controleurs staan in `../docs/dialectcontrole/`.
+Remunjs is vanaf beta 6 de starttaal bij iedere nieuwe paginaweergave, ook bij verversen en ongeacht een eerder opgeslagen taalkeuze. Nederlands blijft beschikbaar bovenaan het menu en is de inhoudelijke bron. De Nederlandse bronteksten staan met vaste sleutels in `copy-nl.js`; `copy-li.js` bevat de oudere werkvertalingen. `copy-reviewed.js` bevat de door Juul als goedgekeurd aangeleverde teksten voor Remunjs, Heëlesj, Zittesj en Mééls en overschrijft uitsluitend die vier varianten. `i18n.js` koppelt de bestanden aan de elf taalkeuzes. De overige dialecten zijn niet opnieuw aangepast of goedgekeurd. Bronnen, eerdere twijfelpunten en de importverantwoording staan in `../docs/dialectcontrole/`.
 
-Sinds beta 3 wordt een taalkeuze apart onthouden. Een oudere voorkeur uit beta 2 verhindert daardoor niet dat het eerste bezoek in het Remunjs opent. Beta 4 behoudt een expliciete keuze die de bezoeker daarna heeft gemaakt.
+Sinds beta 6 wordt een taalkeuze alleen voor de huidige pagina gebruikt. Oude voorkeuren uit beta 3–5 worden niet gelezen of opnieuw opgeslagen.
 
 Bij het aanleveren van definitieve vertalingen zijn per wijziging nodig:
 
@@ -29,7 +29,7 @@ Bij het aanleveren van definitieve vertalingen zijn per wijziging nodig:
 
 - de bevestigde Spotify-link van Melton (niet verwarren met naamgenoten);
 - definitieve invulling van de interactieve taalactiviteiten;
-- gecontroleerde teksten voor alle dialectvarianten.
+- gecontroleerde teksten voor de overige dialectvarianten.
 
 De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangeleverde bronnen. Het Spotify-profiel van Opgeschaoren Troubadours is gecontroleerd aan de hand van Spotify zelf. Het programma volgt het in oktober 2026 aangeleverde Programmaoverzicht DIALEK 2027.pdf. Technische wissels en presentatiemomenten worden niet apart getoond.
 
@@ -41,9 +41,19 @@ De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangelever
 - `website-beta-3`: `7bf0064`, de website zoals die er vóór de feedback van 22 oktober 2026 uitzag.
 - `website-beta-4`: `f29f581`, de afgeronde artiesten-, partner- en dialectupdate van 22 oktober 2026; ook bewaard op `codex/website-beta-4`.
 - `website-beta-5`: versie van 24 oktober 2026 met uitsluitend de definitieve ticketbestemming als websitewijziging: `https://ecicultuurfabriek.nl/voorstelling/dialek/`. Beta 4 blijft het herstelpunt vóór deze aanpassing.
+- `website-beta-5-before-translations`: `ac48272`, inclusief Luuks GitHub-update van 26 oktober 2026. Dit is de basis en het herstelpunt vóór beta 6.
+- `website-beta-6`: goedgekeurde documentteksten, Mééls in plaats van Valkenbergs, Remunjs bij iedere paginaweergave en de Nederlandse festivalregel met “in het Limburgs”.
 - Uitpakbare lokale kopieën staan naast de projectmap in `../Versies/`. Deze grote ZIP-bestanden gaan niet mee naar GitHub. De versiegeschiedenis zelf blijft in Git bewaard.
 
 Beta 1 is onafhankelijk van beta 2 terug te halen via de tag. Om beta 1 te bekijken zonder de huidige bestanden te wijzigen, kan een apart archief of een aparte checkout van die tag gemaakt worden. Gebruik geen harde reset op de werkmap.
+
+## Beta 6: goedgekeurde documentteksten
+
+De vier Google Docs zijn op 27 oktober 2026 via de native documentstructuur gelezen, inclusief tekstkleur en suggestiestatus. Per document zijn alle 67 vertaalblokken overgenomen (68 websitevelden, omdat één tekst twee plekken vult). Er zijn geen openstaande suggesties aangetroffen. Accenten, interpunctie, interne spaties en alinea-einden zijn niet taalkundig gecorrigeerd. De vaste documentlabels horen niet bij de websitetekst.
+
+Mééls · Meijel vervangt Valkebergs · Valkenburg. De menunaam voor Sittard is Zittesj, zoals in de aangeleverde bron; de bestaande interne code blijft behouden. Alleen deze vier dialecten gebruiken nu ook hun aangeleverde schermlezerlabels en metadata. De bron bevat nog werkvertaling-meldingen; die zijn op verzoek om exacte overname eveneens behouden. Nederlands is uitsluitend gewijzigd bij `kicker`: “Een eendaags festival in het Limburgs”.
+
+Bronlinks, tekstcodes, bronversies en controlevingerafdrukken staan in `../docs/dialectcontrole/beta-6-import.json`. De oorspronkelijke Docs zijn niet aangepast. De oudere beta 4-onderzoeksexport is historisch en wordt niet als huidige goedgekeurde tekst gebruikt. Vormgeving, foto's, links en tijden blijven gelijk aan `ac48272`.
 
 ## Beta 5: ticketlink en hostingmap
 
@@ -75,7 +85,7 @@ Inloop dagprogramma 14:30; Tekstverslaafd 15:00–15:45 en 16:45–17:30; Taalma
 
 ## Controle
 
-De actuele browsercontrole in `../tools/check-beta4.cjs` test de Nederlandse tekstkoppeling, alle tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, het onthouden van de taal, de standaard Remunjse landing en de ongewijzigde lucht-/vlaaicode. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle elf taalkeuzes. Deze technische controle is geen taalkundige goedkeuring van de dialecten. De beta 2-test blijft bewaard voor die historische versie.
+De actuele browsercontrole in `../tools/check-beta6.cjs` test de exacte goedgekeurde tekstlaag, behoud van de andere dialecten en Nederlandse tekst, alle tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, Remunjs na opnieuw laden en de ongewijzigde stijlen/lucht/vlaai ten opzichte van `ac48272`. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle elf taalkeuzes. Deze technische controle is geen eigen taalkundige goedkeuring. De oudere tests blijven bewaard voor hun historische versies.
 
 De test gebruikt Node.js met Playwright. Optioneel kunnen `DIALEK_PLAYWRIGHT_PATH` en `DIALEK_BROWSER_PATH` naar een bestaande installatie verwijzen. Screenshots worden in een tijdelijke map bewaard. Er worden geen formulieren ingestuurd en er wordt niets gepubliceerd.
 
@@ -86,5 +96,6 @@ De test gebruikt Node.js met Playwright. Optioneel kunnen `DIALEK_PLAYWRIGHT_PAT
 - `script.js` — dialectwisseling, uitklapkaarten, reveals en parallax;
 - `copy-nl.js` — Nederlandse redactionele bron;
 - `copy-li.js` — voorlopige regionale vertalingen;
+- `copy-reviewed.js` — exact aangeleverde goedgekeurde documentteksten voor vier dialecten;
 - `i18n.js` — taalkeuzes en samenstellen van de teksten;
 - `assets/` — vlaai, wolken, persfoto-webversies en partnerlogo's.

@@ -49,6 +49,7 @@
   var I18N = window.DIALEK_I18N || { dialects: [], defaultCode: "" };
   var byCode = {};
   I18N.dialects.forEach(function (dialect) { byCode[dialect.code] = dialect; });
+  var defaultAria = { homeLinkLabel: "DIALEK home", mainMenuLabel: "Hoofdmenu" };
 
   function escapeHtml(text) {
     return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -83,11 +84,12 @@
       }
     });
     document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
-      var value = dialect.strings[el.getAttribute("data-i18n-aria")];
+      var key = el.getAttribute("data-i18n-aria");
+      var value = dialect.strings[key] || defaultAria[key];
       if (value) el.setAttribute("aria-label", value);
     });
-    // Metadata blijft de Nederlandse, redactioneel vastgelegde bron.
-    var source = window.DIALEK_COPY_NL;
+    // Alleen de aangeleverde dialecten hebben goedgekeurde metadata-vertalingen.
+    var source = dialect.reviewed ? dialect.strings : window.DIALEK_COPY_NL;
     if (source) {
       document.title = source.pageTitle;
       document.querySelector('meta[name="description"]').content = source.description;
@@ -96,9 +98,8 @@
     }
   }
 
-  var stored = null;
-  try { stored = localStorage.getItem("dialek-beta3-language"); } catch (error) {}
-  var current = byCode[stored] ? stored : I18N.defaultCode;
+  // Iedere nieuwe paginaweergave start op Remunjs, ook na een eerdere taalkeuze.
+  var current = I18N.defaultCode;
   var select = document.getElementById("dialectSelect");
 
   if (select) {
@@ -111,7 +112,6 @@
     select.value = current;
     select.addEventListener("change", function () {
       current = select.value;
-      try { localStorage.setItem("dialek-beta3-language", current); } catch (error) {}
       applyDialect(current, !reduceMotion);
     });
   }

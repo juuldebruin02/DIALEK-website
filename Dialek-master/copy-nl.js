@@ -9,7 +9,7 @@
     navInfo: "Over DIALEK",
     navTickets: "Tickets",
     dialectNote: "Nederlandse versie",
-    kicker: "Een eendaags festival in het plat",
+    kicker: "Een eendaags festival in het Limburgs",
     subtitle: "Dat klinkt goed",
     dayDoorsLabel: "Inloop dagprogramma",
     showDoorsLabel: "Inloop avondshowcase",
