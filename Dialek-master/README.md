@@ -14,7 +14,7 @@ Open daarna `http://localhost:4173`.
 
 ## Inhoud en vertalingen
 
-Remunjs is vanaf beta 6 de starttaal bij iedere nieuwe paginaweergave, ook bij verversen en ongeacht een eerder opgeslagen taalkeuze. Nederlands blijft beschikbaar bovenaan het menu en is de inhoudelijke bron. De Nederlandse bronteksten staan met vaste sleutels in `copy-nl.js`; `copy-li.js` bevat de oudere werkvertalingen. `copy-reviewed.js` bevat de door Juul als goedgekeurd aangeleverde teksten voor Remunjs, Heëlesj, Zittesj en Mééls en overschrijft uitsluitend die vier varianten. `i18n.js` koppelt de bestanden aan de elf taalkeuzes. De overige dialecten zijn niet opnieuw aangepast of goedgekeurd. Bronnen, eerdere twijfelpunten en de importverantwoording staan in `../docs/dialectcontrole/`.
+Remunjs is vanaf beta 6 de starttaal bij iedere nieuwe paginaweergave, ook bij verversen en ongeacht een eerder opgeslagen taalkeuze. Nederlands blijft beschikbaar bovenaan het menu en is de inhoudelijke bron. De Nederlandse bronteksten staan met vaste sleutels in `copy-nl.js`; `copy-li.js` bevat de oudere werkvertalingen. `copy-reviewed.js` bevat de door Juul als goedgekeurd aangeleverde teksten voor Remunjs, Heëlesj, Zittesj, Mééls en sinds beta 7 Echts en overschrijft uitsluitend die vijf varianten. `i18n.js` koppelt de bestanden aan de negen taalkeuzes. De overige dialecten zijn niet opnieuw aangepast of goedgekeurd. Bronnen, eerdere twijfelpunten en de importverantwoording staan in `../docs/dialectcontrole/`.
 
 Sinds beta 6 wordt een taalkeuze alleen voor de huidige pagina gebruikt. Oude voorkeuren uit beta 3–5 worden niet gelezen of opnieuw opgeslagen.
 
@@ -43,9 +43,18 @@ De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangelever
 - `website-beta-5`: versie van 24 oktober 2026 met uitsluitend de definitieve ticketbestemming als websitewijziging: `https://ecicultuurfabriek.nl/voorstelling/dialek/`. Beta 4 blijft het herstelpunt vóór deze aanpassing.
 - `website-beta-5-before-translations`: `ac48272`, inclusief Luuks GitHub-update van 26 oktober 2026. Dit is de basis en het herstelpunt vóór beta 6.
 - `website-beta-6`: goedgekeurde documentteksten, Mééls in plaats van Valkenbergs, Remunjs bij iedere paginaweergave en de Nederlandse festivalregel met “in het Limburgs”.
+- `website-beta-7`: bouwt voort op beta 6 (`264216d`); goedgekeurde Echtse tekst, Wieërts en Venrods uit het menu en transparante achtergronden bij Veldeke Remunj/Bibliorura. Beta 6 blijft het herstelpunt; de aanvullende lokale kopie heet `website-beta-6-before-beta-7.zip`.
 - Uitpakbare lokale kopieën staan naast de projectmap in `../Versies/`. Deze grote ZIP-bestanden gaan niet mee naar GitHub. De versiegeschiedenis zelf blijft in Git bewaard.
 
 Beta 1 is onafhankelijk van beta 2 terug te halen via de tag. Om beta 1 te bekijken zonder de huidige bestanden te wijzigen, kan een apart archief of een aparte checkout van die tag gemaakt worden. Gebruik geen harde reset op de werkmap.
+
+## Beta 7: gerichte update van 29 oktober 2026
+
+Uit het aangeleverde Echtse Google Doc zijn 64 ingevulde paarse blokken exact overgenomen, gekoppeld aan 65 websitevelden. D065–D067 bevatten nog invultekst en zijn daarom niet gepubliceerd; de bestaande Nederlandse metadata blijft daar staan. Er waren geen openstaande suggesties. Zie `../docs/dialectcontrole/beta-7-import.json` voor de bronversie, tekstkoppeling en controlevingerafdruk.
+
+Wieërts (Weert) en Venrods (Venray) zijn uitsluitend uit het taalmenu verwijderd. Hun historische bronteksten blijven beschikbaar. Nederlands, de vier eerder goedgekeurde dialecten, de overige taalkeuzes, het programma, de foto's en het gedrag van de site zijn niet gewijzigd.
+
+Voor Veldeke Remunj en Bibliorura vervangt een uitsluitend op deze twee afbeeldingen toegepast SVG-filter de eerdere mengmodus: het papier wordt echt transparant en de inkt wit. De oorspronkelijke logobestanden, afmetingen en positie blijven behouden. Er zijn geen logo's opnieuw getekend.
 
 ## Beta 6: goedgekeurde documentteksten
 
@@ -85,7 +94,7 @@ Inloop dagprogramma 14:30; Tekstverslaafd 15:00–15:45 en 16:45–17:30; Taalma
 
 ## Controle
 
-De actuele browsercontrole in `../tools/check-beta6.cjs` test de exacte goedgekeurde tekstlaag, behoud van de andere dialecten en Nederlandse tekst, alle tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, Remunjs na opnieuw laden en de ongewijzigde stijlen/lucht/vlaai ten opzichte van `ac48272`. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle elf taalkeuzes. Deze technische controle is geen eigen taalkundige goedkeuring. De oudere tests blijven bewaard voor hun historische versies.
+De actuele browsercontrole in `../tools/check-beta7.cjs` test de exacte goedgekeurde tekstlaag, behoud van de andere dialecten en Nederlandse tekst, alle tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, Remunjs na opnieuw laden en de ongewijzigde stijlen/lucht/vlaai ten opzichte van `264216d`, met alleen de twee logo-filters als uitzondering. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle negen taalkeuzes. De twee logo's worden bovendien op transparante randen en witte inkt gecontroleerd. Deze technische controle is geen eigen taalkundige goedkeuring. De oudere tests blijven bewaard voor hun historische versies.
 
 De test gebruikt Node.js met Playwright. Optioneel kunnen `DIALEK_PLAYWRIGHT_PATH` en `DIALEK_BROWSER_PATH` naar een bestaande installatie verwijzen. Screenshots worden in een tijdelijke map bewaard. Er worden geen formulieren ingestuurd en er wordt niets gepubliceerd.
 

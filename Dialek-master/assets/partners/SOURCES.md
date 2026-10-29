@@ -19,6 +19,10 @@ Bronnen geraadpleegd op 16 oktober 2026. Op 22 oktober 2026 zijn de vijf logo’
 
 Deze bronvermelding is geen zelfstandige verklaring over merkrechten; het gebruik is beperkt tot de door Juul opgegeven partners van DIALEK.
 
+## Transparante weergave beta 7
+
+Op 29 oktober 2026 (beta 7) is voor Veldeke Remunj en Bibliorura de eerdere mengmodus vervangen door een SVG-kleurfilter met een alfamasker. Alleen de weergave verandert: de bestaande logo's blijven wit, de oorspronkelijke witte achtergrond wordt echt transparant, ook binnen geïsoleerde animatielagen. De bronbestanden, vormen, afmetingen en posities blijven ongewijzigd.
+
 ## Dialecthulpmiddelen
 
 De dialectteksten zijn eigen, voorlopige bewerkingen van de aangeleverde Nederlandse copy. Deze bronnen geven spelling-/naslagcontext, geen goedkeuring van de websitevertalingen:

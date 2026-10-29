@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  // Goedgekeurde documentteksten overschrijven alleen de vier aangeleverde dialecten.
+  // Goedgekeurde documentteksten overschrijven alleen de aangeleverde dialecten.
   var dutch = window.DIALEK_COPY_NL;
   var regional = window.DIALEK_DIALECT_COPY;
   var reviewed = window.DIALEK_REVIEWED_COPY || {};
@@ -12,10 +12,8 @@
     ["venloos", "Venloos", "Venlo"],
     ["kirchroodsj", "Kirchröadsj", "Kerkrade"],
     ["heeles", "Heëlesj", "Heerlen"],
-    ["wieerts", "Wieërts", "Weert"],
     ["echts", "Echs", "Echt"],
-    ["meels", "Mééls", "Meijel"],
-    ["venroads", "Venrods", "Venray"]
+    ["meels", "Mééls", "Meijel"]
   ];
   var dialects = [{ code: "nl", name: "Nederlands", town: "", strings: dutch }];
   places.forEach(function (place) {

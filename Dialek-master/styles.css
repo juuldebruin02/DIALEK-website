@@ -1160,10 +1160,9 @@ a { color: inherit; text-decoration: none; }
 .partners__list--secondary .partner img { filter: brightness(0) invert(1); }
 .partners__list--secondary .partner img[src$="veldeke-remunj.png"],
 .partners__list--secondary .partner img[src$="bibliorura.jpg"] {
-  /* Black ink becomes white; the original white paper blends into the sky.
-     Keep the source artwork untouched and preserve its antialiased edges. */
-  filter: grayscale(1) contrast(5) invert(1);
-  mix-blend-mode: screen;
+  /* Convert the paper to real transparency, including in isolated layers.
+     The original coloured artwork and its antialiased edges stay intact. */
+  filter: url(#partner-white-transparent);
 }
 .partner img[src$="bibliorura.jpg"] { border-radius: 3px; }
 .footer__contact { width: 100%; margin-top: 12px; font-size: .8rem; }

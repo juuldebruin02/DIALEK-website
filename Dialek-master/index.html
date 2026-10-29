@@ -15,10 +15,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Black&amp;family=League+Spartan:wght@600;700&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=beta4-1" />
+  <link rel="stylesheet" href="styles.css?v=beta7-1" />
 </head>
 <body>
   <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+
+  <!-- White logo artwork with truly transparent paper; original assets stay intact. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="partner-white-transparent" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  -1 -1 -1 0 3" />
+        <feComposite in2="SourceAlpha" operator="in" />
+      </filter>
+    </defs>
+  </svg>
 
   <a data-i18n="skipLink" class="skip-link" href="#main">Naar de inhoud</a>
   <div class="scroll-progress" aria-hidden="true"><span></span></div>
@@ -399,8 +409,8 @@
 
   <script src="copy-nl.js?v=beta6-1"></script>
   <script src="copy-li.js?v=beta4-1"></script>
-  <script src="copy-reviewed.js?v=beta6-1"></script>
-  <script src="i18n.js?v=beta6-1"></script>
+  <script src="copy-reviewed.js?v=beta7-1"></script>
+  <script src="i18n.js?v=beta7-1"></script>
   <script src="script.js?v=beta6-1"></script>
 </body>
 </html>
