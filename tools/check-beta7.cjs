@@ -52,7 +52,9 @@ const slots = {
   assert.equal(await page.locator('a[href="mailto:juuldebruinmusic@gmail.com"]').count(),1);
   assert.equal(await page.locator('.partner').count(),9);
   assert.equal(await page.locator('.partner img').count(),8);
-  assert.equal(await page.locator('.spotify-link').count(),4);
+  assert.equal(await page.locator('.spotify-link').count(),5);
+  assert.equal(await page.locator('#artist-melton-detail .spotify-link').getAttribute('href'),'https://open.spotify.com/artist/3AMBOmEDDFG1RrdoNbkLDb');
+  assert.equal(await page.locator('#artist-melton-detail [data-i18n="spotifyPending"]').count(),0);
   assert.equal(await page.locator('[data-i18n="artistLabel"], [data-i18n="artistPhotoLabel"], [data-artist="TBA"], [data-artist="Sophie Albert"]').count(),0);
   assert.equal(await page.locator('#artist-troubadours-detail [data-i18n-paragraphs] p').count(),2);
   assert.equal(await page.locator('#artist-troubadours-detail .spotify-link').getAttribute('href'),'https://open.spotify.com/artist/1UJkA0mBxwmjxO6FV2QhUT');

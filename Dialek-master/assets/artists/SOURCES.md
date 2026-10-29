@@ -11,6 +11,6 @@ De biografieën zijn door Juul aangeleverd op 22 oktober 2026. De Nederlandse ve
 
 Opgeschaoren Troubadours: [Spotify-artiest](https://open.spotify.com/artist/1UJkA0mBxwmjxO6FV2QhUT). Identiteit gecontroleerd via de artiestverwijzing bij [Veul de Hitte op Spotify](https://open.spotify.com/track/3QDEZjgNY3GW3QQLACrTce).
 
-Melton: nog geen uniek bevestigd Spotify-profiel gevonden. Een profiel van een naamgenoot of van Josh Mosa is niet zonder bevestiging als Melton gekoppeld. Tot de juiste link bekend is, staat er een niet-klikbare status in plaats van een misleidende knop.
+Melton: [Spotify-artiest](https://open.spotify.com/artist/3AMBOmEDDFG1RrdoNbkLDb), op 29 oktober 2026 rechtstreeks door Juul aangeleverd en gekoppeld in beta 7.1. De eerdere niet-klikbare status is vervangen door dezelfde Spotify-knop als bij de andere artiesten; niet door een link naar Josh Mosa of een naamgenoot.
 
 De eerder aanwezige persfoto’s van In Limbo, Riethamer Rekords en The Basement Collective zijn in beta 4 niet gewijzigd. De oude webfoto van Sophie Albert is niet meer op de pagina gekoppeld, maar blijft in de bestanden en versiegeschiedenis behouden.

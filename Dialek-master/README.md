@@ -27,7 +27,6 @@ Bij het aanleveren van definitieve vertalingen zijn per wijziging nodig:
 
 ## Nog te vervangen placeholders
 
-- de bevestigde Spotify-link van Melton (niet verwarren met naamgenoten);
 - definitieve invulling van de interactieve taalactiviteiten;
 - gecontroleerde teksten voor de overige dialectvarianten.
 
@@ -44,6 +43,7 @@ De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangelever
 - `website-beta-5-before-translations`: `ac48272`, inclusief Luuks GitHub-update van 26 oktober 2026. Dit is de basis en het herstelpunt vóór beta 6.
 - `website-beta-6`: goedgekeurde documentteksten, Mééls in plaats van Valkenbergs, Remunjs bij iedere paginaweergave en de Nederlandse festivalregel met “in het Limburgs”.
 - `website-beta-7`: bouwt voort op beta 6 (`264216d`); goedgekeurde Echtse tekst, Wieërts en Venrods uit het menu en transparante achtergronden bij Veldeke Remunj/Bibliorura. Beta 6 blijft het herstelpunt; de aanvullende lokale kopie heet `website-beta-6-before-beta-7.zip`.
+- `website-beta-7-1`: aanvulling op beta 7 met uitsluitend de door Juul op 29 oktober aangeleverde Spotify-link voor Melton; de knop gebruikt dezelfde stijl en vertalingen als de andere artiesten. Beta 7 (`e596653`) blijft het herstelpunt vóór deze aanvulling.
 - Uitpakbare lokale kopieën staan naast de projectmap in `../Versies/`. Deze grote ZIP-bestanden gaan niet mee naar GitHub. De versiegeschiedenis zelf blijft in Git bewaard.
 
 Beta 1 is onafhankelijk van beta 2 terug te halen via de tag. Om beta 1 te bekijken zonder de huidige bestanden te wijzigen, kan een apart archief of een aparte checkout van die tag gemaakt worden. Gebruik geen harde reset op de werkmap.
