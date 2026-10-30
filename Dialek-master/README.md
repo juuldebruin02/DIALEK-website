@@ -14,7 +14,7 @@ Open daarna `http://localhost:4173`.
 
 ## Inhoud en vertalingen
 
-Remunjs is vanaf beta 6 de starttaal bij iedere nieuwe paginaweergave, ook bij verversen en ongeacht een eerder opgeslagen taalkeuze. Nederlands blijft beschikbaar bovenaan het menu en is de inhoudelijke bron. De Nederlandse bronteksten staan met vaste sleutels in `copy-nl.js`; `copy-li.js` bevat de oudere werkvertalingen. `copy-reviewed.js` bevat de door Juul als goedgekeurd aangeleverde teksten voor Remunjs, Heëlesj, Zittesj, Mééls en sinds beta 7 Echts en overschrijft uitsluitend die vijf varianten. `i18n.js` koppelt de bestanden aan de negen taalkeuzes. De overige dialecten zijn niet opnieuw aangepast of goedgekeurd. Bronnen, eerdere twijfelpunten en de importverantwoording staan in `../docs/dialectcontrole/`.
+Remunjs is vanaf beta 6 de starttaal bij iedere nieuwe paginaweergave, ook bij verversen en ongeacht een eerder opgeslagen taalkeuze. Nederlands blijft beschikbaar bovenaan het menu en is de inhoudelijke bron. De Nederlandse bronteksten staan met vaste sleutels in `copy-nl.js`; `copy-li.js` bevat de oudere werkvertalingen. `copy-reviewed.js` bevat de door Juul als goedgekeurd aangeleverde teksten voor Remunjs, Heëlesj, Zittesj, Mééls, Echts en sinds beta 8 Wierts en overschrijft uitsluitend die zes varianten. `i18n.js` koppelt de bestanden aan de tien taalkeuzes. De overige dialecten zijn niet opnieuw aangepast of goedgekeurd. Bronnen, eerdere twijfelpunten en de importverantwoording staan in `../docs/dialectcontrole/`.
 
 Sinds beta 6 wordt een taalkeuze alleen voor de huidige pagina gebruikt. Oude voorkeuren uit beta 3–5 worden niet gelezen of opnieuw opgeslagen.
 
@@ -44,9 +44,16 @@ De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangelever
 - `website-beta-6`: goedgekeurde documentteksten, Mééls in plaats van Valkenbergs, Remunjs bij iedere paginaweergave en de Nederlandse festivalregel met “in het Limburgs”.
 - `website-beta-7`: bouwt voort op beta 6 (`264216d`); goedgekeurde Echtse tekst, Wieërts en Venrods uit het menu en transparante achtergronden bij Veldeke Remunj/Bibliorura. Beta 6 blijft het herstelpunt; de aanvullende lokale kopie heet `website-beta-6-before-beta-7.zip`.
 - `website-beta-7-1`: aanvulling op beta 7 met uitsluitend de door Juul op 29 oktober aangeleverde Spotify-link voor Melton; de knop gebruikt dezelfde stijl en vertalingen als de andere artiesten. Beta 7 (`e596653`) blijft het herstelpunt vóór deze aanvulling.
+- `website-beta-8`: goedgekeurde Wiertse documenttekst en Wierts terug in het taalmenu. Beta 7.1 (`8a97f1a`) blijft het herstelpunt; de aanvullende lokale kopie heet `website-beta-7-1-before-beta-8.zip`.
 - Uitpakbare lokale kopieën staan naast de projectmap in `../Versies/`. Deze grote ZIP-bestanden gaan niet mee naar GitHub. De versiegeschiedenis zelf blijft in Git bewaard.
 
 Beta 1 is onafhankelijk van beta 2 terug te halen via de tag. Om beta 1 te bekijken zonder de huidige bestanden te wijzigen, kan een apart archief of een aparte checkout van die tag gemaakt worden. Gebruik geen harde reset op de werkmap.
+
+## Beta 8: Wierts terug met goedgekeurde tekst
+
+Op 30 oktober 2026 zijn alle 61 ingevulde paarse blokken uit het aangeleverde Wiertse Google Doc letterlijk overgenomen, gekoppeld aan 62 websitevelden. De zes resterende velden (D062–D067) bevatten nog invultekst; daar blijven de bestaande Nederlandse schermlezerlabels en metadata staan. Er waren geen openstaande suggesties. Zie `../docs/dialectcontrole/beta-8-import.json` voor de bronversie, veldkoppeling en controlevingerafdruk.
+
+De keuze heet `Wierts · Weert`, conform de documentnaam, en gebruikt de bestaande interne code `wieerts`. De negen bestaande taalkeuzes en teksten blijven exact gelijk, evenals de vormgeving, tijden, foto's, links en interacties. Remunjs blijft de starttaal. Venrods blijft uit het menu. De in de bron aanwezige werkvertaling-meldingen zijn eveneens letterlijk behouden.
 
 ## Beta 7: gerichte update van 29 oktober 2026
 
@@ -94,7 +101,7 @@ Inloop dagprogramma 14:30; Tekstverslaafd 15:00–15:45 en 16:45–17:30; Taalma
 
 ## Controle
 
-De actuele browsercontrole in `../tools/check-beta7.cjs` test de exacte goedgekeurde tekstlaag, behoud van de andere dialecten en Nederlandse tekst, alle tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, Remunjs na opnieuw laden en de ongewijzigde stijlen/lucht/vlaai ten opzichte van `264216d`, met alleen de twee logo-filters als uitzondering. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle negen taalkeuzes. De twee logo's worden bovendien op transparante randen en witte inkt gecontroleerd. Deze technische controle is geen eigen taalkundige goedkeuring. De oudere tests blijven bewaard voor hun historische versies.
+De actuele browsercontrole in `../tools/check-beta8.cjs` test de exacte goedgekeurde tekstlaag, behoud van de negen bestaande taalkeuzes en Nederlandse tekst, alle tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, Remunjs na opnieuw laden en de volledig ongewijzigde stijlen en interacties ten opzichte van `8a97f1a`. Ook HTML blijft exact gelijk, afgezien van de twee scriptversies voor cacheverversing. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle tien taalkeuzes. De twee logo's worden bovendien op transparante randen en witte inkt gecontroleerd. Deze technische controle is geen eigen taalkundige goedkeuring. De oudere tests blijven bewaard voor hun historische versies.
 
 De test gebruikt Node.js met Playwright. Optioneel kunnen `DIALEK_PLAYWRIGHT_PATH` en `DIALEK_BROWSER_PATH` naar een bestaande installatie verwijzen. Screenshots worden in een tijdelijke map bewaard. Er worden geen formulieren ingestuurd en er wordt niets gepubliceerd.
 
@@ -105,6 +112,6 @@ De test gebruikt Node.js met Playwright. Optioneel kunnen `DIALEK_PLAYWRIGHT_PAT
 - `script.js` — dialectwisseling, uitklapkaarten, reveals en parallax;
 - `copy-nl.js` — Nederlandse redactionele bron;
 - `copy-li.js` — voorlopige regionale vertalingen;
-- `copy-reviewed.js` — exact aangeleverde goedgekeurde documentteksten voor vier dialecten;
+- `copy-reviewed.js` — exact aangeleverde goedgekeurde documentteksten voor zes dialecten;
 - `i18n.js` — taalkeuzes en samenstellen van de teksten;
 - `assets/` — vlaai, wolken, persfoto-webversies en partnerlogo's.

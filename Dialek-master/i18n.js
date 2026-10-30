@@ -12,6 +12,7 @@
     ["venloos", "Venloos", "Venlo"],
     ["kirchroodsj", "Kirchröadsj", "Kerkrade"],
     ["heeles", "Heëlesj", "Heerlen"],
+    ["wieerts", "Wierts", "Weert"],
     ["echts", "Echs", "Echt"],
     ["meels", "Mééls", "Meijel"]
   ];
