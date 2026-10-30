@@ -45,11 +45,18 @@ De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangelever
 - `website-beta-7`: bouwt voort op beta 6 (`264216d`); goedgekeurde Echtse tekst, Wieërts en Venrods uit het menu en transparante achtergronden bij Veldeke Remunj/Bibliorura. Beta 6 blijft het herstelpunt; de aanvullende lokale kopie heet `website-beta-6-before-beta-7.zip`.
 - `website-beta-7-1`: aanvulling op beta 7 met uitsluitend de door Juul op 29 oktober aangeleverde Spotify-link voor Melton; de knop gebruikt dezelfde stijl en vertalingen als de andere artiesten. Beta 7 (`e596653`) blijft het herstelpunt vóór deze aanvulling.
 - `website-beta-8`: goedgekeurde Wiertse documenttekst en Wierts terug in het taalmenu. Beta 7.1 (`8a97f1a`) blijft het herstelpunt; de aanvullende lokale kopie heet `website-beta-7-1-before-beta-8.zip`.
+- `website-beta-8-1`: corrigeert uitsluitend de Wiertse vertaling met het vervangende Word-document `20261028_DIALEK_LJ.docx`. Beta 8 (`a3f1e99`) blijft bewaard, ook lokaal als `website-beta-8-before-wierts-correction.zip`.
 - Uitpakbare lokale kopieën staan naast de projectmap in `../Versies/`. Deze grote ZIP-bestanden gaan niet mee naar GitHub. De versiegeschiedenis zelf blijft in Git bewaard.
 
 Beta 1 is onafhankelijk van beta 2 terug te halen via de tag. Om beta 1 te bekijken zonder de huidige bestanden te wijzigen, kan een apart archief of een aparte checkout van die tag gemaakt worden. Gebruik geen harde reset op de werkmap.
 
-## Beta 8: Wierts terug met goedgekeurde tekst
+## Beta 8.1: vervangende Wiertse bron
+
+Juul heeft op 30 oktober 2026 aangegeven dat het Google Doc uit beta 8 de verkeerde Wiertse vertaling bevatte. Het vervangende Word-document `20261028_DIALEK_LJ.docx` is nu de actuele bron. Alle 61 ingevulde paarse blokken zijn letterlijk overgenomen; 28 van de 62 gekoppelde websitevelden verschillen van beta 8. De zes overige velden bevatten nog invultekst en behouden de bestaande Nederlandse labels en metadata. Er zijn geen bijgehouden wijzigingen of opmerkingen in het document.
+
+De bronvingerafdruk en veldkoppeling staan in `../docs/dialectcontrole/beta-8-1-import.json`. Het oorspronkelijke Word-document is niet aangepast. De negen andere taalvarianten, taalkeuzes, vormgeving, interacties, tijden, foto's en links blijven exact gelijk aan beta 8.
+
+## Beta 8: Wierts terug (bron vervangen in beta 8.1)
 
 Op 30 oktober 2026 zijn alle 61 ingevulde paarse blokken uit het aangeleverde Wiertse Google Doc letterlijk overgenomen, gekoppeld aan 62 websitevelden. De zes resterende velden (D062–D067) bevatten nog invultekst; daar blijven de bestaande Nederlandse schermlezerlabels en metadata staan. Er waren geen openstaande suggesties. Zie `../docs/dialectcontrole/beta-8-import.json` voor de bronversie, veldkoppeling en controlevingerafdruk.
 
@@ -101,7 +108,7 @@ Inloop dagprogramma 14:30; Tekstverslaafd 15:00–15:45 en 16:45–17:30; Taalma
 
 ## Controle
 
-De actuele browsercontrole in `../tools/check-beta8.cjs` test de exacte goedgekeurde tekstlaag, behoud van de negen bestaande taalkeuzes en Nederlandse tekst, alle tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, Remunjs na opnieuw laden en de volledig ongewijzigde stijlen en interacties ten opzichte van `8a97f1a`. Ook HTML blijft exact gelijk, afgezien van de twee scriptversies voor cacheverversing. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle tien taalkeuzes. De twee logo's worden bovendien op transparante randen en witte inkt gecontroleerd. Deze technische controle is geen eigen taalkundige goedkeuring. De oudere tests blijven bewaard voor hun historische versies.
+De actuele browsercontrole in `../tools/check-beta8-1.cjs` test de exacte aangeleverde tekstlaag, behoud van de negen andere taalvarianten en Nederlandse tekst, alle tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, Remunjs na opnieuw laden en de volledig ongewijzigde stijlen, taalkeuzes en interacties ten opzichte van `a3f1e99`. Ook HTML blijft exact gelijk, afgezien van de scriptversie voor het vernieuwde vertaalbestand. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle tien taalkeuzes. De twee logo's worden bovendien op transparante randen en witte inkt gecontroleerd. Deze technische controle is geen eigen taalkundige goedkeuring. De oudere tests blijven bewaard voor hun historische versies.
 
 De test gebruikt Node.js met Playwright. Optioneel kunnen `DIALEK_PLAYWRIGHT_PATH` en `DIALEK_BROWSER_PATH` naar een bestaande installatie verwijzen. Screenshots worden in een tijdelijke map bewaard. Er worden geen formulieren ingestuurd en er wordt niets gepubliceerd.
 

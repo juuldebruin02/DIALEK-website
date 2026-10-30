@@ -1,0 +1,500 @@
+{
+  "version": "website-beta-8-1",
+  "date": "2026-10-30",
+  "baseCommit": "a3f1e99dfa83ebd55e8b352d3ffce0352f409a81",
+  "sources": [
+    {
+      "code": "wieerts",
+      "fileName": "20261028_DIALEK_LJ.docx",
+      "sourceSha256": "5f93c8b891ac28ecaea052d6c5d52eaa464e0d0df3bf087d9b8710b0174d85ce",
+      "blocks": 61,
+      "keys": 62,
+      "changedKeys": 28,
+      "stringsSha256": "beef6524fd941c67ffb0640b9239a23eab8509202abe9da091de852fcaf47933"
+    }
+  ],
+  "fieldMapping": [
+    {
+      "id": "D001",
+      "keys": [
+        "navProgram"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D002",
+      "keys": [
+        "navInfo",
+        "infoEyebrow"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D003",
+      "keys": [
+        "navTickets"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D004",
+      "keys": [
+        "dialectNote"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D005",
+      "keys": [
+        "kicker"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D006",
+      "keys": [
+        "subtitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D007",
+      "keys": [
+        "dayDoorsLabel"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D008",
+      "keys": [
+        "showDoorsLabel"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D009",
+      "keys": [
+        "heroDate"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D010",
+      "keys": [
+        "heroTown"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D011",
+      "keys": [
+        "heroTickets"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D012",
+      "keys": [
+        "scrollHint"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D013",
+      "keys": [
+        "programEyebrow"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D014",
+      "keys": [
+        "programTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D015",
+      "keys": [
+        "programIntro"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D016",
+      "keys": [
+        "dayKicker"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D017",
+      "keys": [
+        "dayTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D018",
+      "keys": [
+        "activityBreaks"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D019",
+      "keys": [
+        "foodNote"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D020",
+      "keys": [
+        "nightKicker"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D021",
+      "keys": [
+        "nightTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D022",
+      "keys": [
+        "showBlockOne"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D023",
+      "keys": [
+        "showBlockTwo"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D024",
+      "keys": [
+        "pause"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D025",
+      "keys": [
+        "spotifySearch"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D026",
+      "keys": [
+        "spotifyPending"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D027",
+      "keys": [
+        "textStageTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D028",
+      "keys": [
+        "textStageShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D029",
+      "keys": [
+        "textStageLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D030",
+      "keys": [
+        "matchShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D031",
+      "keys": [
+        "matchLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D032",
+      "keys": [
+        "matchCta"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D033",
+      "keys": [
+        "languageTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D034",
+      "keys": [
+        "languageShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D035",
+      "keys": [
+        "languageLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D036",
+      "keys": [
+        "networkTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D037",
+      "keys": [
+        "networkShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D038",
+      "keys": [
+        "networkLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D039",
+      "keys": [
+        "troubadoursShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D040",
+      "keys": [
+        "troubadoursLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D041",
+      "keys": [
+        "meltonShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D042",
+      "keys": [
+        "meltonLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D043",
+      "keys": [
+        "limboShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D044",
+      "keys": [
+        "limboLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D045",
+      "keys": [
+        "riethamerShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D046",
+      "keys": [
+        "riethamerLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D047",
+      "keys": [
+        "basementShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D048",
+      "keys": [
+        "basementLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D049",
+      "keys": [
+        "presentedBy"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D050",
+      "keys": [
+        "lotteShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D051",
+      "keys": [
+        "lotteLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D052",
+      "keys": [
+        "infoTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D053",
+      "keys": [
+        "infoLead"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D054",
+      "keys": [
+        "partnersHeading"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D055",
+      "keys": [
+        "partnersMore"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D056",
+      "keys": [
+        "town"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D057",
+      "keys": [
+        "contactLabel"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D058",
+      "keys": [
+        "translationFooter"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D059",
+      "keys": [
+        "skipLink"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D060",
+      "keys": [
+        "languageSelectLabel"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D061",
+      "keys": [
+        "programScrollLabel"
+      ],
+      "kind": "active_i18n"
+    }
+  ],
+  "omittedUnfilledFields": [
+    {
+      "id": "D062",
+      "keys": [
+        "homeLinkLabel"
+      ],
+      "kind": "static_aria"
+    },
+    {
+      "id": "D063",
+      "keys": [
+        "mainMenuLabel"
+      ],
+      "kind": "static_aria"
+    },
+    {
+      "id": "D064",
+      "keys": [
+        "pageTitle"
+      ],
+      "kind": "fixed_dutch_metadata"
+    },
+    {
+      "id": "D065",
+      "keys": [
+        "description"
+      ],
+      "kind": "fixed_dutch_metadata"
+    },
+    {
+      "id": "D066",
+      "keys": [
+        "ogTitle"
+      ],
+      "kind": "fixed_dutch_metadata"
+    },
+    {
+      "id": "D067",
+      "keys": [
+        "ogDescription"
+      ],
+      "kind": "fixed_dutch_metadata"
+    }
+  ],
+  "method": [
+    "De aangeleverde Word-bron vervangt op expliciet verzoek het eerder gebruikte Google Doc voor Wierts.",
+    "Alle 61 ingevulde paarse vertaalblokken (#763A83) uit de DOCX-structuur gelezen en letterlijk gekoppeld aan dezelfde 62 websitevelden. Alle zes bronpagina's ook gerenderd en visueel nagekeken.",
+    "Geen bijgehouden wijzigingen, opmerkingen, tekstvakken of tabellen aangetroffen. Alleen het documentlabel 'Wierts: ' verwijderd; spelling, accenten, interpunctie en alinea's behouden. Geen eigen taalkundige correcties.",
+    "D062–D067 bevatten 'voeg hie de vertaling toe'; deze invultekst niet gepubliceerd. Bestaande Nederlandse schermlezerlabels en metadata blijven ongewijzigd.",
+    "28 Wiertse tekstvelden verschillen van beta 8. Alle overige dialecten en het Nederlands zijn exact gelijk; menu, Remunjs-starttaal, foto's, tijden, links, CSS en gedrag blijven ongewijzigd.",
+    "De eerdere Google Doc-import in beta-8-import.json is alleen nog historisch bewijs, geen actuele Wiertse goedkeuringsbron."
+  ],
+  "supersedes": "beta-8-import.json (alleen de Wiertse bron; verkeerd document volgens Juul)"
+}
+
