@@ -1,0 +1,591 @@
+{
+  "version": "website-beta-9",
+  "date": "2026-11-01",
+  "baseCommit": "eb9b4f242234b376178e0dad92a9d405f559ad36",
+  "sources": [
+    {
+      "code": "venloos",
+      "documentId": "12VtiV2ySHXPOcxwF1v0BJuSp-d4rJgF_EYneE-bM3Vw",
+      "title": "Venloos — DIALEK website",
+      "url": "https://docs.google.com/document/d/12VtiV2ySHXPOcxwF1v0BJuSp-d4rJgF_EYneE-bM3Vw",
+      "revisionId": "AHj4eMR-JDG4zYpeVJj_oZkDSy6rLu8eiHRNXoG3VvZpS8BHGuilhTjA2MA3Ix6kbqb-znQJk-aJ6lyDrloKyyXL0T2fAaLFfAkOhRw",
+      "blocks": 67,
+      "keys": 68,
+      "stringsSha256": "69f328afa3188fac6c898328a8fc939f023591cc33146be14ac14cd8eedbb106",
+      "removedReviewerNotes": 0,
+      "omittedUnfilledFields": []
+    },
+    {
+      "code": "kirchroodsj",
+      "documentId": "1R9NVLAjJVEOKGdISrw2iHJlthIt3xQHY9FD7QjByR00",
+      "title": "Kirchröadsj — DIALEK website",
+      "url": "https://docs.google.com/document/d/1R9NVLAjJVEOKGdISrw2iHJlthIt3xQHY9FD7QjByR00",
+      "revisionId": "AHj4eMQcP9UjBR53TWGiynfuuTpDDWvB_Xy2WABL3diw1g1mvFwH_1y147Yo1mUU5B530MzB8x1f0ORc7bzI7r1H9ZDL1I_uSVUJi4M",
+      "blocks": 61,
+      "keys": 62,
+      "stringsSha256": "d066bab41cfb8612670ce41bbe93306b22fad06a97e977fa95db391b5652e9df",
+      "removedReviewerNotes": 32,
+      "omittedUnfilledFields": [
+        {
+          "id": "D062",
+          "keys": [
+            "homeLinkLabel"
+          ],
+          "kind": "static_aria"
+        },
+        {
+          "id": "D063",
+          "keys": [
+            "mainMenuLabel"
+          ],
+          "kind": "static_aria"
+        },
+        {
+          "id": "D064",
+          "keys": [
+            "pageTitle"
+          ],
+          "kind": "fixed_dutch_metadata"
+        },
+        {
+          "id": "D065",
+          "keys": [
+            "description"
+          ],
+          "kind": "fixed_dutch_metadata"
+        },
+        {
+          "id": "D066",
+          "keys": [
+            "ogTitle"
+          ],
+          "kind": "fixed_dutch_metadata"
+        },
+        {
+          "id": "D067",
+          "keys": [
+            "ogDescription"
+          ],
+          "kind": "fixed_dutch_metadata"
+        }
+      ]
+    }
+  ],
+  "fieldMapping": [
+    {
+      "id": "D001",
+      "keys": [
+        "navProgram"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D002",
+      "keys": [
+        "navInfo",
+        "infoEyebrow"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D003",
+      "keys": [
+        "navTickets"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D004",
+      "keys": [
+        "dialectNote"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D005",
+      "keys": [
+        "kicker"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D006",
+      "keys": [
+        "subtitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D007",
+      "keys": [
+        "dayDoorsLabel"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D008",
+      "keys": [
+        "showDoorsLabel"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D009",
+      "keys": [
+        "heroDate"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D010",
+      "keys": [
+        "heroTown"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D011",
+      "keys": [
+        "heroTickets"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D012",
+      "keys": [
+        "scrollHint"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D013",
+      "keys": [
+        "programEyebrow"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D014",
+      "keys": [
+        "programTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D015",
+      "keys": [
+        "programIntro"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D016",
+      "keys": [
+        "dayKicker"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D017",
+      "keys": [
+        "dayTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D018",
+      "keys": [
+        "activityBreaks"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D019",
+      "keys": [
+        "foodNote"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D020",
+      "keys": [
+        "nightKicker"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D021",
+      "keys": [
+        "nightTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D022",
+      "keys": [
+        "showBlockOne"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D023",
+      "keys": [
+        "showBlockTwo"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D024",
+      "keys": [
+        "pause"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D025",
+      "keys": [
+        "spotifySearch"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D026",
+      "keys": [
+        "spotifyPending"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D027",
+      "keys": [
+        "textStageTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D028",
+      "keys": [
+        "textStageShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D029",
+      "keys": [
+        "textStageLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D030",
+      "keys": [
+        "matchShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D031",
+      "keys": [
+        "matchLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D032",
+      "keys": [
+        "matchCta"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D033",
+      "keys": [
+        "languageTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D034",
+      "keys": [
+        "languageShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D035",
+      "keys": [
+        "languageLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D036",
+      "keys": [
+        "networkTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D037",
+      "keys": [
+        "networkShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D038",
+      "keys": [
+        "networkLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D039",
+      "keys": [
+        "troubadoursShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D040",
+      "keys": [
+        "troubadoursLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D041",
+      "keys": [
+        "meltonShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D042",
+      "keys": [
+        "meltonLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D043",
+      "keys": [
+        "limboShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D044",
+      "keys": [
+        "limboLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D045",
+      "keys": [
+        "riethamerShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D046",
+      "keys": [
+        "riethamerLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D047",
+      "keys": [
+        "basementShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D048",
+      "keys": [
+        "basementLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D049",
+      "keys": [
+        "presentedBy"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D050",
+      "keys": [
+        "lotteShort"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D051",
+      "keys": [
+        "lotteLong"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D052",
+      "keys": [
+        "infoTitle"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D053",
+      "keys": [
+        "infoLead"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D054",
+      "keys": [
+        "partnersHeading"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D055",
+      "keys": [
+        "partnersMore"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D056",
+      "keys": [
+        "town"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D057",
+      "keys": [
+        "contactLabel"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D058",
+      "keys": [
+        "translationFooter"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D059",
+      "keys": [
+        "skipLink"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D060",
+      "keys": [
+        "languageSelectLabel"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D061",
+      "keys": [
+        "programScrollLabel"
+      ],
+      "kind": "active_i18n"
+    },
+    {
+      "id": "D062",
+      "keys": [
+        "homeLinkLabel"
+      ],
+      "kind": "static_aria"
+    },
+    {
+      "id": "D063",
+      "keys": [
+        "mainMenuLabel"
+      ],
+      "kind": "static_aria"
+    },
+    {
+      "id": "D064",
+      "keys": [
+        "pageTitle"
+      ],
+      "kind": "fixed_dutch_metadata"
+    },
+    {
+      "id": "D065",
+      "keys": [
+        "description"
+      ],
+      "kind": "fixed_dutch_metadata"
+    },
+    {
+      "id": "D066",
+      "keys": [
+        "ogTitle"
+      ],
+      "kind": "fixed_dutch_metadata"
+    },
+    {
+      "id": "D067",
+      "keys": [
+        "ogDescription"
+      ],
+      "kind": "fixed_dutch_metadata"
+    }
+  ],
+  "publicationOverrides": {
+    "fields": [
+      "dialectNote",
+      "translationFooter"
+    ],
+    "translationFooters": {
+      "nl": "Alle dialectvertalingen zijn nagekeken door dialectsprekers.",
+      "remunjs": "Alle dialekvertalinge zeen nagekeke door dialeksjpraekers.",
+      "mestreechs": "Alle dialekvertaolinge zien naogekeke door dialeksprekers.",
+      "zitterds": "Alle dialekvertalinge zeen naogekeke door dialeksjpraekers.",
+      "venloos": "Alle dialekvertalinge zien naogekeke door dialekspraekers.",
+      "kirchroodsj": "Alle dialekvertalinge zunt noagekeke durch dialeksjprekers.",
+      "heeles": "Alle dialekvertalinge zint noagekieëke durch dialeksjpreëkers.",
+      "wieerts": "Alle dialekvertalinge zeen nagekeke door dialeksprekers.",
+      "echts": "Alle dialekvertalinge zeen naogekeke door dialekspraekers.",
+      "meels": "Alle diejalèktvertaalinge zin naogekeeke dur diejalèktspréékers."
+    },
+    "mestreechsNote": "Dees vertaoling is nog in oontwikkeling."
+  },
+  "method": [
+    "Beide native Google Docs gelezen inclusief alle tabinhoud, tekstkleuren en suggestiestatus. Geen openstaande suggesties gevonden.",
+    "Vertaalblokken D001–D067 via vaste sleutels gekoppeld; alleen de documentlabels en één afsluitende alinea-newline verwijderd. Accenten, interpunctie, interne spaties en alinea's behouden.",
+    "Venloos D004 heeft een andere paarstint (#674ea7), maar is de expliciete Venlose vertaalregel; eveneens letterlijk bewaard.",
+    "Bij Kirchröadsj 32 losse reviewerregels 'JJ 01-11' / 'JJ 01 -11' verwijderd conform Juuls opdracht. Zes niet-ingevulde velden D062–D067 niet gepubliceerd; bestaande Nederlandse aria-labels en metadata blijven als fallback.",
+    "Melton gebruikt al dezelfde spotifySearch-sleutel (D025) als alle andere artiesten; de bestaande directe Spotify-link is behouden. D026 is uitsluitend historisch bronmateriaal en wordt nergens getoond.",
+    "De brongetrouwe copy-reviewed.js blijft intact voor eerdere dialecten. De expliciet gevraagde nieuwe footer en het verwijderen van werkvertaling-labels worden daarna via i18n.js toegepast op alle tien taalkeuzes.",
+    "Alleen Mestreechs toont een eigen ontwikkelingsmelding bij de taalkeuze, ook op mobiel. De overige Maastrichts-teksten zijn ongewijzigd.",
+    "Footerformuleringen afgeleid van de door de gebruiker aangeleverde zin en bestaande nagekeken lokale spellingen. Deze nieuwe statuszinnen zijn geen onderdeel van de eerdere menselijke broncontrole.",
+    "Menuopties, starttaal Remunjs, tijden, links, afbeeldingen en interacties blijven ongewijzigd."
+  ],
+  "statusLanguageReferences": [
+    {
+      "url": "https://www.mestreechtertaol.nl/dictionair/mst/dees/1/",
+      "use": "Aanwijzend voornaamwoord dees"
+    },
+    {
+      "url": "https://www.mestreechtertaol.nl/nuits/mestreechs-tempeleers",
+      "use": "Lokale schrijfwijze vertaoling"
+    },
+    {
+      "url": "https://www.veldeke.net/lb/hoes-veur-t-limburgs-de-stand-vaan-zake/",
+      "use": "Lokale schrijfwijze oontwikkeling; gecombineerd tot korte statuszin"
+    }
+  ]
+}
+

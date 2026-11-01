@@ -26,5 +26,25 @@
       strings: Object.assign({}, dutch, regional.common, regional.variants[place[0]], reviewed[place[0]])
     });
   });
+  // Actuele publicatiestatus staat los van de letterlijk bewaarde documentteksten.
+  // Alleen deze twee statusvelden overschrijven oudere werkvertaling-meldingen.
+  var translationFooters = {
+    "nl": "Alle dialectvertalingen zijn nagekeken door dialectsprekers.",
+    "remunjs": "Alle dialekvertalinge zeen nagekeke door dialeksjpraekers.",
+    "mestreechs": "Alle dialekvertaolinge zien naogekeke door dialeksprekers.",
+    "zitterds": "Alle dialekvertalinge zeen naogekeke door dialeksjpraekers.",
+    "venloos": "Alle dialekvertalinge zien naogekeke door dialekspraekers.",
+    "kirchroodsj": "Alle dialekvertalinge zunt noagekeke durch dialeksjprekers.",
+    "heeles": "Alle dialekvertalinge zint noagekieëke durch dialeksjpreëkers.",
+    "wieerts": "Alle dialekvertalinge zeen nagekeke door dialeksprekers.",
+    "echts": "Alle dialekvertalinge zeen naogekeke door dialekspraekers.",
+    "meels": "Alle diejalèktvertaalinge zin naogekeeke dur diejalèktspréékers."
+  };
+  dialects.forEach(function (dialect) {
+    dialect.strings = Object.assign({}, dialect.strings, {
+      dialectNote: dialect.code === "mestreechs" ? "Dees vertaoling is nog in oontwikkeling." : "",
+      translationFooter: translationFooters[dialect.code]
+    });
+  });
   window.DIALEK_I18N = { dialects: dialects, defaultCode: "remunjs" };
 })();

@@ -252,6 +252,8 @@ a { color: inherit; text-decoration: none; }
   opacity: .66;
 }
 
+.nav__language-note:empty { display: none; }
+
 .nav__cta {
   display: inline-flex;
   align-items: center;
@@ -1193,7 +1195,6 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 900px) {
   .nav { align-items: flex-start; }
   .nav__links { gap: 16px; }
-  .nav__language-note { display: none; }
   .nav__select { max-width: 135px; }
   .hero { min-height: 920px; }
   .vlaai-rig { top: 54%; bottom: auto; width: clamp(175px, 28vw, 220px); transform: translate(-50%, -1%); }
@@ -1238,6 +1239,7 @@ a { color: inherit; text-decoration: none; }
   .nav__links { order: 2; width: 100%; justify-content: space-between; gap: 10px; font-size: .76rem; }
   .nav__language { position: absolute; top: 13px; right: 15px; }
   .nav__lang { min-height: 34px; padding: 0 8px; }
+  .nav__language-note { top: calc(100% + 1px); font-size: .6rem; line-height: 1; }
   .nav__select { max-width: 155px; font-size: .74rem; }
   .nav__cta { min-height: 35px; padding: 0 12px; }
   .nav__cta svg { display: none; }

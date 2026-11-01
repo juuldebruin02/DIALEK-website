@@ -14,7 +14,7 @@ Open daarna `http://localhost:4173`.
 
 ## Inhoud en vertalingen
 
-Remunjs is vanaf beta 6 de starttaal bij iedere nieuwe paginaweergave, ook bij verversen en ongeacht een eerder opgeslagen taalkeuze. Nederlands blijft beschikbaar bovenaan het menu en is de inhoudelijke bron. De Nederlandse bronteksten staan met vaste sleutels in `copy-nl.js`; `copy-li.js` bevat de oudere werkvertalingen. `copy-reviewed.js` bevat de door Juul als goedgekeurd aangeleverde teksten voor Remunjs, Heëlesj, Zittesj, Mééls, Echts en sinds beta 8 Wierts en overschrijft uitsluitend die zes varianten. `i18n.js` koppelt de bestanden aan de tien taalkeuzes. De overige dialecten zijn niet opnieuw aangepast of goedgekeurd. Bronnen, eerdere twijfelpunten en de importverantwoording staan in `../docs/dialectcontrole/`.
+Remunjs is vanaf beta 6 de starttaal bij iedere nieuwe paginaweergave, ook bij verversen en ongeacht een eerder opgeslagen taalkeuze. Nederlands blijft beschikbaar bovenaan het menu en is de inhoudelijke bron. De Nederlandse bronteksten staan met vaste sleutels in `copy-nl.js`; `copy-li.js` bevat de oudere werkvertalingen. `copy-reviewed.js` bevat de door Juul als nagekeken aangeleverde teksten voor Remunjs, Heëlesj, Zittesj, Mééls, Echts, Wierts en sinds beta 9 Venloos en Kirchröadsj. `i18n.js` koppelt de bestanden aan de tien taalkeuzes en past de actuele publicatiestatus afzonderlijk toe. Mestreechs blijft in ontwikkeling. Bronnen, eerdere twijfelpunten en de importverantwoording staan in `../docs/dialectcontrole/`.
 
 Sinds beta 6 wordt een taalkeuze alleen voor de huidige pagina gebruikt. Oude voorkeuren uit beta 3–5 worden niet gelezen of opnieuw opgeslagen.
 
@@ -28,7 +28,7 @@ Bij het aanleveren van definitieve vertalingen zijn per wijziging nodig:
 ## Nog te vervangen placeholders
 
 - definitieve invulling van de interactieve taalactiviteiten;
-- gecontroleerde teksten voor de overige dialectvarianten.
+- gecontroleerde teksten voor Mestreechs.
 
 De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangeleverde bronnen. Het Spotify-profiel van Opgeschaoren Troubadours is gecontroleerd aan de hand van Spotify zelf. Het programma volgt het in oktober 2026 aangeleverde Programmaoverzicht DIALEK 2027.pdf. Technische wissels en presentatiemomenten worden niet apart getoond.
 
@@ -46,9 +46,20 @@ De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangelever
 - `website-beta-7-1`: aanvulling op beta 7 met uitsluitend de door Juul op 29 oktober aangeleverde Spotify-link voor Melton; de knop gebruikt dezelfde stijl en vertalingen als de andere artiesten. Beta 7 (`e596653`) blijft het herstelpunt vóór deze aanvulling.
 - `website-beta-8`: goedgekeurde Wiertse documenttekst en Wierts terug in het taalmenu. Beta 7.1 (`8a97f1a`) blijft het herstelpunt; de aanvullende lokale kopie heet `website-beta-7-1-before-beta-8.zip`.
 - `website-beta-8-1`: corrigeert uitsluitend de Wiertse vertaling met het vervangende Word-document `20261028_DIALEK_LJ.docx`. Beta 8 (`a3f1e99`) blijft bewaard, ook lokaal als `website-beta-8-before-wierts-correction.zip`.
+- `website-beta-9`: nagekeken Venloos en Kirchröadsj, actuele footer en alleen bij Mestreechs een ontwikkelingsmelding. Beta 8.1 (`eb9b4f2`) blijft het herstelpunt, ook lokaal als `website-beta-8-1-before-beta-9.zip`.
 - Uitpakbare lokale kopieën staan naast de projectmap in `../Versies/`. Deze grote ZIP-bestanden gaan niet mee naar GitHub. De versiegeschiedenis zelf blijft in Git bewaard.
 
 Beta 1 is onafhankelijk van beta 2 terug te halen via de tag. Om beta 1 te bekijken zonder de huidige bestanden te wijzigen, kan een apart archief of een aparte checkout van die tag gemaakt worden. Gebruik geen harde reset op de werkmap.
+
+## Beta 9: Venloos, Kirchröadsj en publicatiestatus
+
+Op 1 november 2026 zijn 67 Venlose en 61 ingevulde Kerkraadse vertaalblokken uit de bijgewerkte Google Docs letterlijk overgenomen. Bij Kirchröadsj zijn uitsluitend de 32 losse controleursnotities `JJ 01-11` / `JJ 01 -11` weggelaten. D062–D067 zijn daar niet ingevuld en houden de Nederlandse fallback. Beide bronnen bevatten geen openstaande suggesties. Bronversies, tekstkoppelingen en hashes staan in `../docs/dialectcontrole/beta-9-import.json`.
+
+Melton behoudt zijn directe Spotify-link en gebruikt de vertaling van dezelfde luisterknop als de vier andere artiesten. Het verouderde bronveld `spotifyPending` wordt nergens getoond.
+
+De nieuwe footer vermeldt in iedere taalvariant dat alle dialectvertalingen zijn nagekeken door dialectsprekers. De oude werkvertaling-melding bij het taalmenu verdwijnt. Alleen bij Mestreechs verschijnt `Dees vertaoling is nog in oontwikkeling.`, ook op mobiel. Deze twee statusvelden worden afzonderlijk in `i18n.js` toegepast; de letterlijke bronteksten en vingerafdrukken blijven bewaard. De nieuwe statuszinnen zijn op verzoek vertaald en vormen geen onderdeel van de eerdere menselijke documentcontrole.
+
+Alle overige tekstvelden, taalopties, Remunjse starttaal, foto's, tijden, links en interacties zijn behouden. CSS-wijzigingen zijn beperkt tot het tonen en plaatsen van de Mestreechse melding.
 
 ## Beta 8.1: vervangende Wiertse bron
 
@@ -108,7 +119,7 @@ Inloop dagprogramma 14:30; Tekstverslaafd 15:00–15:45 en 16:45–17:30; Taalma
 
 ## Controle
 
-De actuele browsercontrole in `../tools/check-beta8-1.cjs` test de exacte aangeleverde tekstlaag, behoud van de negen andere taalvarianten en Nederlandse tekst, alle tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, Remunjs na opnieuw laden en de volledig ongewijzigde stijlen, taalkeuzes en interacties ten opzichte van `a3f1e99`. Ook HTML blijft exact gelijk, afgezien van de scriptversie voor het vernieuwde vertaalbestand. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle tien taalkeuzes. De twee logo's worden bovendien op transparante randen en witte inkt gecontroleerd. Deze technische controle is geen eigen taalkundige goedkeuring. De oudere tests blijven bewaard voor hun historische versies.
+De actuele browsercontrole in `../tools/check-beta9.cjs` test de exacte aangeleverde tekstlaag, behoud van alle overige teksten buiten de twee gevraagde statusvelden, tijdslots, links, vijf fotoafmetingen, toetsenbordbediening, Remunjs na opnieuw laden en behoud van stijlen en interacties ten opzichte van `eb9b4f2`. De enige HTML/CSS-uitzonderingen zijn statusmeldingen en cacheversies. Layoutcontrole: 320, 375, 390, 768, 900, 1024, 1280, 1440 en 1512 pixels breed, telkens alle tien taalkeuzes. Ook de zichtbaarheid en plaatsing van de Mestreechse melding, de vertaalde Spotify-labels en transparante logo's worden gecontroleerd. Deze technische controle is geen eigen taalkundige goedkeuring. Oudere tests blijven bewaard voor hun historische versies.
 
 De test gebruikt Node.js met Playwright. Optioneel kunnen `DIALEK_PLAYWRIGHT_PATH` en `DIALEK_BROWSER_PATH` naar een bestaande installatie verwijzen. Screenshots worden in een tijdelijke map bewaard. Er worden geen formulieren ingestuurd en er wordt niets gepubliceerd.
 
@@ -119,6 +130,6 @@ De test gebruikt Node.js met Playwright. Optioneel kunnen `DIALEK_PLAYWRIGHT_PAT
 - `script.js` — dialectwisseling, uitklapkaarten, reveals en parallax;
 - `copy-nl.js` — Nederlandse redactionele bron;
 - `copy-li.js` — voorlopige regionale vertalingen;
-- `copy-reviewed.js` — exact aangeleverde goedgekeurde documentteksten voor zes dialecten;
+- `copy-reviewed.js` — exact aangeleverde nagekeken documentteksten voor acht dialecten;
 - `i18n.js` — taalkeuzes en samenstellen van de teksten;
 - `assets/` — vlaai, wolken, persfoto-webversies en partnerlogo's.
