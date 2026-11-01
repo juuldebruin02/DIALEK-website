@@ -23,7 +23,18 @@
       "revisionId": "AHj4eMQcP9UjBR53TWGiynfuuTpDDWvB_Xy2WABL3diw1g1mvFwH_1y147Yo1mUU5B530MzB8x1f0ORc7bzI7r1H9ZDL1I_uSVUJi4M",
       "blocks": 61,
       "keys": 62,
-      "stringsSha256": "d066bab41cfb8612670ce41bbe93306b22fad06a97e977fa95db391b5652e9df",
+      "stringsSha256": "05fe01bbcc49702946b5766b53539140195b46c2a372e99830eebf70a9452111",
+      "documentStringsSha256": "d066bab41cfb8612670ce41bbe93306b22fad06a97e977fa95db391b5652e9df",
+      "postImportCorrections": [
+        {
+          "version": "website-beta-9-1",
+          "date": "2026-11-01",
+          "source": "Expliciete correctie van Juul in de chat",
+          "keys": ["navInfo", "infoEyebrow"],
+          "before": "Euvel ‘t DIALEK",
+          "after": "Euver DIALEK"
+        }
+      ],
       "removedReviewerNotes": 32,
       "omittedUnfilledFields": [
         {

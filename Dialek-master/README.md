@@ -47,6 +47,7 @@ De aanmeldlink en bestaande Spotify-profielen zijn overgenomen uit de aangelever
 - `website-beta-8`: goedgekeurde Wiertse documenttekst en Wierts terug in het taalmenu. Beta 7.1 (`8a97f1a`) blijft het herstelpunt; de aanvullende lokale kopie heet `website-beta-7-1-before-beta-8.zip`.
 - `website-beta-8-1`: corrigeert uitsluitend de Wiertse vertaling met het vervangende Word-document `20261028_DIALEK_LJ.docx`. Beta 8 (`a3f1e99`) blijft bewaard, ook lokaal als `website-beta-8-before-wierts-correction.zip`.
 - `website-beta-9`: nagekeken Venloos en Kirchröadsj, actuele footer en alleen bij Mestreechs een ontwikkelingsmelding. Beta 8.1 (`eb9b4f2`) blijft het herstelpunt, ook lokaal als `website-beta-8-1-before-beta-9.zip`.
+- `website-beta-9-1`: uitsluitend Juuls correctie van het Kerkraadse navigatielabel en sectielabel naar “Euver DIALEK”. Beta 9 (`799bc86`) blijft het herstelpunt.
 - Uitpakbare lokale kopieën staan naast de projectmap in `../Versies/`. Deze grote ZIP-bestanden gaan niet mee naar GitHub. De versiegeschiedenis zelf blijft in Git bewaard.
 
 Beta 1 is onafhankelijk van beta 2 terug te halen via de tag. Om beta 1 te bekijken zonder de huidige bestanden te wijzigen, kan een apart archief of een aparte checkout van die tag gemaakt worden. Gebruik geen harde reset op de werkmap.

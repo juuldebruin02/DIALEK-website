@@ -298,7 +298,7 @@ const slots = {
   const currentFile = name => fs.readFileSync(path.join(site,name),'utf8');
   const expectedHtml=originalFile('index.html')
     .replace('styles.css?v=beta7-1','styles.css?v=beta9-1')
-    .replace('copy-reviewed.js?v=beta8-1-corrected','copy-reviewed.js?v=beta9-1')
+    .replace('copy-reviewed.js?v=beta8-1-corrected','copy-reviewed.js?v=beta9-1-euver')
     .replace('i18n.js?v=beta8-1','i18n.js?v=beta9-1')
     .replace('aria-label="Kies je taal of dialect"></select>','aria-label="Kies je taal of dialect" aria-describedby="dialectNote"></select>')
     .replace('<span class="nav__language-note" data-i18n="dialectNote">Nederlandse versie</span>','<span class="nav__language-note" id="dialectNote" data-i18n="dialectNote"></span>')

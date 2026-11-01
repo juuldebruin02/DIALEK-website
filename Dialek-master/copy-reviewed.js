@@ -77,8 +77,8 @@
     },
     "kirchroodsj": {
       "navProgram": "Programma",
-      "navInfo": "Euvel ‘t DIALEK",
-      "infoEyebrow": "Euvel ‘t DIALEK",
+      "navInfo": "Euver DIALEK",
+      "infoEyebrow": "Euver DIALEK",
       "navTickets": "Kaarte",
       "dialectNote": "Werkvertaling · nog naokieke",
       "kicker": "E festival veur ein daag in ’t plat",
