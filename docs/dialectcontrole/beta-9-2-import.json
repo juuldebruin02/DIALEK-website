@@ -1,0 +1,15 @@
+{
+  "version": "website-beta-9-2",
+  "date": "2026-11-12",
+  "baseCommit": "c07c0b6b4914b56fc2a6e1b1bb7f71bf3c193b39",
+  "code": "kirchroodsj",
+  "sourceFile": "Kirchröadsj — DIALEK website.pdf",
+  "fileSha256": "137b0d1caf7767390c611b24e3277648b505a26285ecee938329fc6aad2d053a",
+  "stringsSha256": "e677110c70a5949d2d35e9f5f8780da21aa39cc783f34c8cf4670225dec40ba3",
+  "blocks": 67,
+  "keys": 68,
+  "removedReviewerNotes": 32,
+  "fieldMapping": "beta-9-import.json#fieldMapping",
+  "method": "Uitsluitend de paarse tekst per D001–D067, met behoud van alinea’s; PDF-regelafbrekingen, veldprefix en losse JJ-datumnotities niet overgenomen.",
+  "publication": "D002 is in deze bron Uvver DIALEK. De bestaande regels voor de taalstatus (D004 en D058) en de werkende Spotify-knoppen (D025; D026 ongebruikt) blijven gelden."
+}

@@ -8,6 +8,8 @@ const output = fs.mkdtempSync(path.join(require('node:os').tmpdir(), 'dialek-bet
 const url = process.env.DIALEK_TEST_URL || require('node:url').pathToFileURL(path.join(site, 'index.html')).href;
 const errors = [], findings = [];
 const reviewed = JSON.parse(fs.readFileSync(path.join(__dirname, '../docs/dialectcontrole/beta-9-import.json'), 'utf8'));
+const kerkraadsPdf = JSON.parse(fs.readFileSync(path.join(__dirname, '../docs/dialectcontrole/beta-9-2-import.json'), 'utf8'));
+const latestSources = reviewed.sources.map(source => source.code === kerkraadsPdf.code ? kerkraadsPdf : source);
 const earlierReviewed = {sources: ['beta-6-import.json', 'beta-7-import.json', 'beta-8-1-import.json'].flatMap(name => JSON.parse(fs.readFileSync(path.join(__dirname, '../docs/dialectcontrole', name), 'utf8')).sources)};
 const vm = require('node:vm');
 function loadCopy(ref) {
@@ -222,7 +224,7 @@ const slots = {
   assert.ok(!/voeg hie[r]? de vertaling toe/.test(JSON.stringify(liveCopy.approved.wieerts)));
   for(const [code,strings] of Object.entries(baseline.DIALEK_REVIEWED_COPY))assert.deepEqual(liveCopy.approved[code],strings,code+' reviewed copy changed');
   for(const key of ['pageTitle','description','ogTitle','ogDescription'])assert.equal(liveCopy.dialects.find(d=>d.code==='wieerts').strings[key],baseline.DIALEK_COPY_NL[key]);
-  for(const source of reviewed.sources)assert.equal(Object.keys(liveCopy.approved[source.code]).length,source.keys);
+  for(const source of latestSources)assert.equal(Object.keys(liveCopy.approved[source.code]).length,source.keys);
   await page.selectOption('#dialectSelect','wieerts');
   assert.equal(await page.locator('.nav__brand').getAttribute('aria-label'),'DIALEK home');
   assert.equal(await page.locator('.nav__links').getAttribute('aria-label'),'Hoofdmenu');
@@ -231,7 +233,7 @@ const slots = {
     const withoutStatus=strings=>Object.fromEntries(Object.entries(strings).filter(([key])=>!['dialectNote','translationFooter'].includes(key)));
     assert.deepEqual(withoutStatus(liveCopy.dialects.find(d=>d.code===prior.code).strings),withoutStatus(prior.strings),prior.code+' changed outside status fields');
   }
-  for(const source of [...earlierReviewed.sources,...reviewed.sources]){
+  for(const source of [...earlierReviewed.sources,...latestSources]){
     const hash=require('node:crypto').createHash('sha256').update(JSON.stringify(liveCopy.approved[source.code])).digest('hex');
     assert.equal(hash,source.stringsSha256,source.code+' differs from approved source');
     for(const size of [{width:1512,height:850},{width:390,height:844},{width:320,height:740}]){
@@ -298,7 +300,7 @@ const slots = {
   const currentFile = name => fs.readFileSync(path.join(site,name),'utf8');
   const expectedHtml=originalFile('index.html')
     .replace('styles.css?v=beta7-1','styles.css?v=beta9-1')
-    .replace('copy-reviewed.js?v=beta8-1-corrected','copy-reviewed.js?v=beta9-1-euver')
+    .replace('copy-reviewed.js?v=beta8-1-corrected','copy-reviewed.js?v=beta9-2')
     .replace('i18n.js?v=beta8-1','i18n.js?v=beta9-1')
     .replace('aria-label="Kies je taal of dialect"></select>','aria-label="Kies je taal of dialect" aria-describedby="dialectNote"></select>')
     .replace('<span class="nav__language-note" data-i18n="dialectNote">Nederlandse versie</span>','<span class="nav__language-note" id="dialectNote" data-i18n="dialectNote"></span>')
